@@ -1,0 +1,2225 @@
+@CHARSET "UTF-8";
+/* General */
+.scContainer{
+	background-color: #fff;
+	color: #b8babc;
+	font: normal 14px/16px LatoRegular, Arial, sans-serif;
+	margin: 0;
+	overflow: visible; /* Change from 'hidden', due bug who hide part of the menu */
+	padding: 0;
+	width: 1024px;
+}
+/* Reset */
+.scContainer div, .scContainer span, .scContainer applet, .scContainer object, .scContainer iframe,
+.scContainer h1, .scContainer h2, .scContainer h3, .scContainer h4, .scContainer h5, .scContainer h6, .scContainer p, .scContainer blockquote, .scContainer pre,
+.scContainer a, .scContainer abbr, .scContainer acronym, .scContainer address, .scContainer big, .scContainer cite, .scContainer code,
+.scContainer del, .scContainer dfn, .scContainer em, .scContainer img, .scContainer ins, .scContainer kbd, .scContainer q, .scContainer s, .scContainer samp,
+.scContainer small, .scContainer strike, .scContainer strong, .scContainer sub, .scContainer sup, .scContainer tt, .scContainer var,
+.scContainer b, .scContainer u, .scContainer i, .scContainer center,
+.scContainer dl, .scContainer dt, .scContainer dd, .scContainer ol, .scContainer ul, .scContainer li,
+.scContainer fieldset, .scContainer form, .scContainer label, .scContainer legend,
+.scContainer table, .scContainer caption, .scContainer tbody, .scContainer tfoot, .scContainer thead, .scContainer tr, .scContainer th, .scContainer td,
+.scContainer article, .scContainer aside, .scContainer canvas, .scContainer details, .scContainer embed, 
+.scContainer figure, .scContainer figcaption, .scContainer footer, .scContainer header, .scContainer hgroup, 
+.scContainer menu, .scContainer nav, .scContainer output, .scContainer ruby, .scContainer section, .scContainer summary,
+.scContainer time, .scContainer mark, .scContainer audio, .scContainer video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+.scContainer article, .scContainer aside, .scContainer details, .scContainer figcaption, .scContainer figure, 
+.scContainer footer, .scContainer header, .scContainer hgroup, .scContainer menu, .scContainer nav, .scContainer section {
+	display: block;
+}
+.scContainer ol, .scContainer ul {
+	list-style: none;
+}
+.scContainer blockquote, .scContainer q {
+	quotes: none;
+}
+.scContainer blockquote:before, .scContainer blockquote:after,
+.scContainer q:before, .scContainer q:after {
+	content: '';
+	content: none;
+}
+.scContainer table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* init */
+.scContainer div,
+.scContainer p,
+.scContainer span,
+.scContainer ul{
+	background-color: inherit;
+	color: inherit;
+	font: inherit;
+}
+.scContainer p{
+	margin: 10px 0 0;
+	padding: 0;
+}
+
+/**/
+.scContainer .scBold{font-weight: bold !important}
+.scContainer .scItalic{font-style: italic !important}
+.scContainer .scUnderline{text-decoration: underline !important}
+.scContainer .scFloatLeft{float: left}
+.scContainer .scFloatRight{float: right}
+.scContainer .scClearLeft{clear: left}
+.scContainer .scClearRight{clear: right}
+.scContainer .scClearBoth{clear: both}
+.scContainer .scOverflow{overflow: hidden}
+.scContainer .scAlignRight{text-align: right !important}
+.scContainer .scAlignCenter{text-align: center !important}
+.scContainer .scAlignMiddle{vertical-align: middle !important}
+.scContainer .scUpperCase{text-transform: uppercase !important}
+
+.scContainer a:link,
+.scContainer a:visited,
+.scContainer a:active{
+	color: #306dab;
+	display: inline;
+	outline: none;
+	text-transform: none;
+	text-decoration: none;
+}
+.scContainer a:hover{
+	text-decoration: underline;
+}
+.scContainer a.scLink{
+	background: none;
+} 
+.scContainer .scForm{}
+.scContainer .scText,
+.scContainer .scSelect,
+.scContainer .scTextarea{
+	border: solid 1px #e7e6e6;
+	color: #777;
+	margin: 0;
+	outline: none;
+	padding: 8px;
+	
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.scContainer .scSelect{
+	-webkit-appearance: menulist-button;
+	line-height: 28px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	::i-block-chrome, .scContainer .scSelect {
+		text-indent: 8px;
+	}
+}
+.scContainer .scForm p{
+	overflow: hidden;
+}
+.scContainer .scTitle{
+	color: #292f35;
+	font: normal 15px LatoBold, Arial, sans-serif;
+	display: block;
+	padding: 0 0 5px;
+	text-transform: none;
+}
+.scContainer span.scLeft,
+.scContainer .scValue{
+	display: block;
+	margin: 8px 0 0;
+}
+.scContainer .scRequired{
+	color: #CC0000;
+}
+.scContainer .scError{
+	color: #CC0000;
+}
+.scContainer input[type=checkbox],
+.scContainer input[type=radio]{
+	outline: none;
+}
+.scContainer input.scError,
+.scContainer select.scError,
+.scContainer textarea.scError{
+	background-color: #feeaeb;
+	border: solid 1px #f6cccd;
+	color: #c54b4a;
+}
+.scContainer label.scError{
+	display: block;
+	margin: 2px 0 0;
+}
+.scContainer .scValid{
+	background-color: #DDEEDD;
+	color: #006600;
+}
+.scContainer input.scValid,
+.scContainer select.scValid,
+.scContainer textarea.scValid{
+	border: solid 1px #AAD6AA;
+}
+
+.scContainer .scPL10{padding-left: 10px !important}
+.scContainer .scPL20{padding-left: 20px !important}
+.scContainer .scPL30{padding-left: 30px !important}
+.scContainer .scPL40{padding-left: 40px !important}
+.scContainer .scPL50{padding-left: 50px !important}
+
+.scContainer .scW50{width: 50px !important}
+.scContainer .scW100{width: 100px !important}
+.scContainer .scW150{width: 150px !important}
+.scContainer .scW200{width: 200px !important}
+.scContainer .scW250{width: 250px !important}
+.scContainer .scW300{width: 300px !important}
+.scContainer .scW350{width: 350px !important}
+.scContainer .scW400{width: 400px !important}
+.scContainer .scW450{width: 450px !important}
+.scContainer .scW500{width: 500px !important}
+.scContainer .scW550{width: 550px !important}
+.scContainer .scW600{width: 600px !important}
+.scContainer .scW650{width: 650px !important}
+.scContainer .scW700{width: 700px !important}
+.scContainer .scW750{width: 750px !important}
+
+.scContainer .scCaptcha{
+	border: solid 1px #ccc;
+	vertical-align: middle;
+}
+
+/* Product List */
+.scContainer .scProductItem{
+	border-right: solid 1px #e7e7e7;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 0 55px;
+	overflow: hidden;
+	position: relative;
+	width: 25%;
+	height: 290px;
+	float: left;
+}
+.scContainer .scProductItem:hover,
+.scContainer .scProductItemHover{
+	border-color: #ece8e8;
+	background-color: #414a54;
+}
+.scContainer .scProductItem:hover .scProductItemPic,
+.scContainer .scProductItemHover .scProductItemPic{
+	display: none;
+}
+.scContainer .scProductItem:hover .scProductItemName a,
+.scContainer .scProductItemHover .scProductItemName a{
+	color: #fff;
+}
+.scContainer .scProductItem:hover .scProductItemPrice,
+.scContainer .scProductItemHover .scProductItemPrice{
+	color: #fff;
+}
+.scContainer .scProductItem:hover .scProductItemPriceValue,
+.scContainer .scProductItemHover .scProductItemPriceValue{
+	color: #e98455;
+}
+.scContainer .scProductItem:hover .scProductItemButtons,
+.scContainer .scProductItemHover .scProductItemButtons{
+	display: block;
+	top: 97px;
+	height: 49px;
+}
+.scContainer .scProductItemPic{
+	text-align: center;
+}
+.scContainer .scProductItemPic a{
+	display: inline-block;
+	margin: 10px;
+}
+.scContainer .scProductItemPic img{
+	border: none;
+	max-height: 187px;
+	max-width: 187px;
+	vertical-align: middle;
+}
+.scContainer .scProductItemInfo{
+	overflow: hidden;
+	text-align: center;
+}
+.scContainer .scProductItemName{
+	height: 38px;
+	overflow: hidden;
+	position: absolute;
+	bottom: 36px;
+	width: 100%;
+}
+.scContainer .scProductItemName a:link,
+.scContainer .scProductItemName a:visited,
+.scContainer .scProductItemName a:active{
+	background: none;
+	color: #25a9df;
+	font-size: 16px;
+	font-family: LatoBold;
+	line-height: 18px;
+	padding: 0 10px;
+	text-decoration: none;
+	text-transform: none;
+}
+.scContainer .scProductItemName a:hover{
+	text-decoration: underline;
+}
+.scContainer .scProductItemPrice{
+	color: #404040;
+	font: normal 16px/18px LatoRegular, sans-serif;
+	position: absolute;
+	bottom: 12px;
+	width: 100%;
+}
+.scContainer .scProductItemPriceValue{
+	font: normal 17px/18px LatoBlack, sans-serif;
+}
+.scContainer .scProductItemOutOfStock{
+	position: absolute;
+	bottom: 15px;
+	left: 0;
+	width: 100%;
+}
+.scContainer .scProductOutOfStock{
+	background: #f7f8f9 url(../img/frontend/icon-out.png) left center no-repeat;
+	border: solid 1px #e4e4e4;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: inset 0 0 3px #f0f1f2;
+	-webkit-box-shadow: inset 0 0 3px #f0f1f2;
+	box-shadow: inset 0 0 3px #f0f1f2;
+	color: #575653;
+	font-size: 14px;
+	font-weight: normal;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 5px 5px 5px 25px;
+	text-transform: lowercase;
+	text-align: center;
+}
+.scContainer .scProductItemButtons{
+	display: none;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+.scContainer a.scButtonPicto,
+.scContainer .scButtonPicto{
+	border: none;
+	cursor: pointer;
+	max-height: 49px;
+	max-width: 49px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+}
+.scContainer .scProductItemButtons a.scButtonPicto,
+.scContainer .scProductItemButtons .scButtonPicto{
+	height: 49px;
+	width: 49px;
+	max-width: none;
+	max-height: none;
+}
+.scContainer .scButtonPictoCart{
+	background: url(../img/frontend/layout-2/sc-btn-cart-orange.png) 0 0 no-repeat;
+}
+.scContainer .scButtonPictoPlus{
+	background: url(../img/frontend/layout-2/sc-btn-plus-blue.png) 0 0 no-repeat;
+}
+.scContainer .scButtonPictoDel,
+.scContainer a.scButtonPictoDel{
+	/*background: url(../img/frontend/layout-2/sc-btn-del-gray.png) 0 0 no-repeat;*/
+}
+.scContainer .scButtonPictoDel:hover{
+	/*background-image: url(../img/frontend/layout-2/sc-btn-del-orange.png);*/
+}
+.scContainer .scButtonPictoEye,
+.scContainer a.scButtonPictoEye{
+	/*background: url(../img/frontend/layout-2/sc-btn-eye-gray.png) 0 0 no-repeat;*/
+}
+.scContainer .scButtonPictoEye:hover{
+	/*background-image: url(../img/frontend/layout-2/sc-btn-eye-blue.png);*/
+}
+
+.scContainer .scButtonPicto img{
+	max-width: 100%;
+}
+
+.scContainer .scProductItemButtons .scButton{
+	border: none;
+	margin-bottom: 2px;
+	height: 49px;
+	width: 49px;
+	text-indent: 100px;
+	overflow: hidden;
+	font-size: 0;
+}
+/* Product Details */
+.scContainer .scProduct{
+	margin: 0 0 10px;
+	overflow: hidden;
+	padding: 10px;
+}
+.scContainer .scProductGallery{
+	float: left;
+	width: 31%;
+}
+.scContainer .scProductGallery img{
+	border: none;
+}
+.scContainer .scProductPic{
+	background-color: #fff;
+	text-align: center;
+}
+.scContainer .scProductPic img{
+	max-width: 100%;
+}
+.scContainer .scProductThumbs{
+	margin: 10px 0 0;
+	width: 100%;
+}
+.scContainer .scProductThumbs a:link,
+.scContainer .scProductThumbs a:visited,
+.scContainer .scProductThumbs a:active,
+.scContainer .scProductThumbs a:hover,
+.scContainer .scProductThumbs a:focus{
+	border: solid 3px #fff;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #fff;
+	display: inline-block;
+	padding: 5px;
+	margin: 0 0 5px 0;
+	overflow: hidden;
+	text-align: center;
+	max-width: 25%;
+}
+.scContainer .scProductThumbs a:hover{
+	border-color: #bfbfbf;
+}
+.scContainer .scProductThumbs img{
+	max-width: 100%;
+}
+.scContainer .scProductDesc{
+	font: normal 16px/24px LatoRegular, Arial, sans-serif;
+}
+.scContainer .scProductInfo{
+	float: right;
+	width: 69%;
+}
+.scContainer .scProductInfoInner{
+	margin: 0 0 0 25px;
+}
+.scContainer .scProductHeadingBox{
+	float: right;
+	width: 69%;
+}
+.scContainer .scProductName{
+	color: #292f35;
+	font: normal 30px LatoBlack, Arial, sans-serif;
+	text-transform: none;
+}
+.scContainer .scProductPrice{
+	color: #e98455;
+	font: normal 24px/24px LatoBlack, Arial, sans-serif;
+	margin: 10px 0;
+}
+.scContainer .scProductAttributes{
+	border-bottom: solid 1px #d9dbdd;
+	overflow: hidden;
+	margin: 0 0 15px;
+	padding: 0 0 5px;
+}
+.scContainer .scProductAttrBox{
+	float: left;
+	margin: 0 5px 5px 0;
+	padding: 1px;
+}
+.scContainer .scProductAttrName{
+	font: normal 15px LatoBold, Arial, sans-serif;
+	height: 18px;
+	line-height: 18px;
+	overflow: hidden;
+	text-transform: uppercase;
+}
+.scContainer .scProductAttrValues{
+}
+.scContainer .scProductExtras{
+	overflow: hidden;
+}
+.scContainer .scProductExtraBox{
+	margin: 0 0 10px;
+}
+.scContainer .scProductControl{
+	border-top: solid 1px #d9dbdd;
+	overflow: hidden;
+	padding: 15px 0 42px 0;
+	position: relative;
+}
+.scContainer .scProductControlFoot{
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	min-height: 36px;
+	height: auto !important;
+	height: 36px;
+	text-indent: 0;
+	overflow: hidden;
+}
+.scContainer .scProductSimilarWrapper{
+	border: solid 3px #efeceb;
+	padding: 0 10px;
+	overflow: hidden;
+}
+.scContainer .scProductSimilarBox{
+	height: 266px;
+	overflow: hidden;
+	padding: 0 0 5px;
+}
+.scContainer .scProductSimilar{
+	background-color: #fff;
+	border-right: solid 1px #e7e7e7;
+	float: left;
+	height: 264px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 5px 0 0;
+	text-align: center;
+	width: 19%;
+}
+.scContainer .scProductSimilarPic{
+	
+}
+.scContainer .scProductSimilarPic a{
+	display: inline-block;
+	margin: 10px;
+}
+.scContainer .scProductSimilarPic img{
+	border: none;
+	max-height: 165px;
+	vertical-align: middle;
+}
+.scContainer .scProductSimilarInfo{
+	overflow: hidden;
+}
+.scContainer .scProductSimilarName{
+	color: #25a9df;
+	font: normal 16px/18px LatoBold, Arial, sans-serif;
+	position: absolute;
+	bottom: 40px;
+	height: 38px;
+	overflow: hidden;
+	width: 100%;
+}
+.scContainer .scProductSimilarName a{
+	background: none;
+	color: #25a9df;
+}
+.scContainer .scProductSimilarPrice{
+	color: #21282e;
+	font: normal 16px/18px LatoRegular, Arial, sans-serif;
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+}
+.scContainer .scProductSimilarPriceValue{
+	font: normal 17px/18px LatoBlack, Arial, sans-serif;
+}
+.scContainer .scSelectorSend2FriendBox{
+	border: solid 1px #ece8e8;
+	margin: 15px 0 0;
+	padding: 0 20px;
+	overflow: hidden;
+}
+	
+.scContainer a.scButtonAdd2Favs:link, 
+.scContainer a.scButtonAdd2Favs:visited,
+.scContainer a.scButtonAdd2Favs:active,
+.scContainer a.scButtonSend2Friend:link,
+.scContainer a.scButtonSend2Friend:visited,
+.scContainer a.scButtonSend2Friend:active{
+	color: #0788d6;
+	display: inline-block;
+	height: 15px;
+	line-height: 18px;
+	/*margin: 8px 12px 0 0;*/
+	margin: 0 10px 0 0px;
+	text-indent: 22px;
+	text-decoration: none;
+	text-transform: none;
+}
+.scContainer a.scButtonAdd2Favs:hover,
+.scContainer a.scButtonSend2Friend:hover{
+	text-decoration: underline;
+}
+.scContainer .scButtonAdd2Favs{
+	background: url(../img/frontend/layout-2/sc-icon-fav.png) left center no-repeat;
+}
+.scContainer .scButtonAdd2FavsIn{
+	background: url(../img/frontend/layout-2/sc-icon-fav.png) left center no-repeat;
+}
+.scContainer .scButtonSend2Friend{
+	background: url(../img/frontend/layout-2/sc-icon-friend.png) left center no-repeat;
+}
+.scContainer .scProductSpinner{
+	border: solid 1px #e7e6e6;
+	overflow: hidden;
+	height: 34px;
+	width: 100px;
+}
+.scContainer .scProductSpinButton:link,
+.scContainer .scProductSpinButton:visited,
+.scContainer .scProductSpinButton:active{
+	background-color: #fbfbfb;
+	border: none;
+	color: #b8babc;
+	display: inline-block;
+	float: left;
+	line-height: 34px;
+	height: 100%;
+	text-align: center;
+	text-decoration: none;
+	width: 30%;
+}
+.scContainer .scProductSpinButton:hover{
+	text-decoration: none;
+}
+.scContainer .scProductSpinValue{
+	background-color: #fff;
+	float: left;
+	border: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-left: solid 1px #e7e6e6;
+	border-right: solid 1px #e7e6e6;
+	height: 100%;
+	text-align: center;
+	width: 40%;
+}
+
+.scContainer .scProductAttrRow,
+.scContainer .scProductOpt{
+	margin: 10px 0 0;
+	overflow: visible;
+}
+.scContainer .scProductAttr{
+	border: solid 1px #ccc;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	margin: 0 2px 2px 0;
+	padding: 1px 5px;
+}
+.scContainer a.scProductAttr:link,
+.scContainer a.scProductAttr:visited,
+.scContainer a.scProductAttr:active{
+	text-decoration: none;
+}
+.scContainer a.scProductAttr:hover{
+	background-color: #eee;
+}
+.scContainer a.scProductAttrSelected{
+	background-color: #ededed;
+}
+.scContainer .scSelectorPriceBox{
+	font-size: 20px;
+}
+
+/* Paginator */
+.scContainer .scPaginator{
+	list-style: none;
+	margin: 15px 0 0;
+	overflow: hidden;
+	padding: 0;
+	text-align: center;
+}
+.scContainer .scPaginator li{
+	display: inline;
+}
+.scContainer .scPaginator a:link,
+.scContainer .scPaginator a:visited,
+.scContainer .scPaginator a:active{
+	background-color: #efeceb;
+	color: #25a9df;
+	display: inline-block;
+	font-size: 16px;
+	line-height: 18px;
+	margin: 0 1px 1px 0;
+	padding: 8px 13px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+.scContainer .scPaginator a:hover{
+	background-color: #eee;
+	text-decoration: none;
+}
+.scContainer .scPaginator a.scPaginatorFocus{
+	background-color: #e98455;
+	color: #fff;
+}
+
+/* Form */
+.scContainer .scSelect{
+	border: solid 1px #e7e6e6;
+	padding: 8px;
+}
+/* Table */
+.scContainer .scTable1{
+	background-color: #fff;
+	border: none;
+}
+.scContainer .scTable1HeadRow{
+	background-color: #fff;
+	clear: left;
+	overflow: hidden;
+}
+.scContainer .scTable1BodyRow{
+	background-color: #fff;
+	clear: left;
+	overflow: hidden;
+	
+	min-height: 73px;
+	height: auto !important;
+	height: 73px;
+}
+.scContainer .scTable1FootRow{
+	background-color: #fff;
+	clear: left;
+	overflow: hidden;
+}
+.scContainer .scTable1TopRow{
+	border-top: solid 1px #ece8e8;
+}
+.scContainer .scTable1Td{
+	padding: 6px;
+}
+.scContainer .scTable1Td a{
+	
+}
+.scContainer .scTable1ThDel, 
+.scContainer .scTable1TdDel{
+	float: left;
+	width: 6%;
+	text-align: center;
+}
+.scContainer .scTable1ThPic, 
+.scContainer .scTable1TdPic{
+	float: left;
+	width: 8.5%;
+}
+.scContainer .scTable1ThPic{
+	display: none;
+	width: 0;
+}
+.scContainer .scTable1TdPic img{
+	max-width: 100%;/*69px*/
+}
+.scContainer .scTable1ThName, 
+.scContainer .scTable1TdName{
+	float: left;
+	width: 49.5%;/*53*/
+}
+.scContainer .scTable1ThName{
+	width: 58%;/*59*/
+}
+.scContainer .scTable1ThPrice, 
+.scContainer .scTable1TdPrice{
+	color: #292f35;
+	float: left;
+	font: normal 18px/20px LatoBold, Arial, sans-serif;
+	width: 9%;
+	text-align: right;
+}
+.scContainer .scTable1ThQty, 
+.scContainer .scTable1TdQty{
+	float: left;
+	min-width: 12%;
+	max-width: 13%;
+	/*width: 12%;*/
+}
+.scContainer .scTable1ThTotal, 
+.scContainer .scTable1TdTotal{
+	color: #292f35;
+	float: left;
+	font: normal 18px/20px LatoBold, Arial, sans-serif;
+	width: 15%;
+	text-align: right;
+}
+.scContainer .scTable1ThNamePrice,
+.scContainer .scTable1ThQtyTotal{
+	display: none;
+	float: left;
+	width: 0;
+}
+.scContainer .scTable1TdFootLabel{
+	float: left;
+	width: 85%;
+	text-align: right;
+	font: normal 16px LatoRegular, Arial, sans-serif;
+	
+	color: #292f35;
+	font-weight: normal;
+	padding: 10px 0;
+	text-transform: none;
+}
+.scContainer .scTable1TdFootValue{
+	/*background: navy;*/
+	float: left;
+	width: 15%;
+	padding: 10px 0;
+	text-align: right;
+}
+.scContainer .scTable1Th{
+	color: #292f35;
+	font: normal 16px/20px LatoBold, Arial, sans-serif;
+	padding: 14px 6px;
+	text-transform: none;
+}
+.scContainer .scTable1FormatPrices{
+	color: #292f35;
+	font: normal 18px LatoBold, Arial, sans-serif;
+}
+.scContainer .scTable1FormatSubTotal{
+	color: #292f35;
+	font: normal 22px LatoBold, Arial, sans-serif;
+}
+.scContainer .scTable1FormatTotal{
+	color: #292f35;
+	font: normal 30px LatoBold, Arial, sans-serif;
+}
+
+.scContainer .scTable{
+	border-collapse: separate;
+	border: solid 1px #ece8e8;
+	color: #222;
+	margin: 0 0 10px;
+	width: 100%;
+}
+.scContainer .scTable thead th{
+	color: #78797c;
+	text-align: left;
+	background-color: #fff;
+	border: none;
+	border-bottom: solid 1px #ece8e8;
+	font-weight: normal;
+	padding: 15px 12px;
+	empty-cells: show;
+	text-transform: uppercase;
+}
+.scContainer .scTable tbody td{
+	background-color: #f8f8f8;
+	border: none;
+	border-bottom: solid 1px #ece8e8;
+	color: #404244;
+	padding: 10px 12px;
+	empty-cells: show;
+	text-transform: uppercase;
+}
+.scContainer .scTable tfoot td{
+	background-color: #fff;
+	border: none;
+	color: #78797c;
+	padding: 10px 12px;
+	empty-cells: show;
+	text-transform: uppercase;
+}
+/*.scContainer .scCartRemove,
+.scContainer a.scCartRemove{
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+}*/
+
+.scContainer a.scProductLink:link,
+.scContainer a.scProductLink:visited,
+.scContainer a.scProductLink:active,
+.scContainer a.scProductLink:focus{
+	color: #25a9df;
+	font: normal 16px/24px LatoBold, Arial, sans-serif;
+	text-transform: none;
+	text-decoration: none;
+}
+.scContainer a.scProductLink:hover{
+	text-decoration: underline;
+}
+.scContainer a.scProductImageLink:link,
+.scContainer a.scProductImageLink:active,
+.scContainer a.scProductImageLink:visited{
+	border: none;
+	overflow: hidden;
+	display: inline-block;
+	width: 100%;
+}
+.scContainer a.scProductImageLink:hover{
+	
+}
+.scContainer a.scProductImageLink img{
+	border: none;
+	vertical-align: middle;
+}
+
+/* Category Menu */
+.scContainer .scMenuBar,
+.scContainer .scMenu{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.scContainer .scMenuBar{
+	background-color: #e98455;
+	height: 48px;
+	margin: 0 0 15px;
+}
+.scContainer .scMenuBar a:link,
+.scContainer .scMenuBar a:visited,
+.scContainer .scMenuBar a:active,
+.scContainer .scMenuBar a:hover{
+	background: none;
+	color: #fff;
+	text-transform: none;
+	text-decoration: none;
+	font: normal 17px/18px LatoBold, Arial, sans-serif;
+	display: inline-block;
+	padding: 15px 20px;
+	overflow: hidden;
+	outline: none;
+}
+.scContainer .scMenuBarItem{
+	background-color: #e98455;
+	height: 48px;
+	float: left;
+	margin: 0;
+	padding: 0 18px 0 0;
+	position: relative;
+}
+.scContainer .scMenuBarItem .scMenu{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+}
+.scContainer .scMenuBarItem:active,
+.scContainer .scMenuBarItemActive{
+	background: url(../img/frontend/layout-2/sc-arrow-up.png) 40% 100% no-repeat;
+}
+.scContainer .scMenuBarItem:active > a:link,
+.scContainer .scMenuBarItem:active > a:visited,
+.scContainer .scMenuBarItem:active > a:active,
+.scContainer .scMenuBarItem:active > a:hover,
+.scContainer .scMenuBarItem:active > a:focus,
+.scContainer .scMenuBarItemActive > a:link,
+.scContainer .scMenuBarItemActive > a:visited,
+.scContainer .scMenuBarItemActive > a:active,
+.scContainer .scMenuBarItemActive > a:hover,
+.scContainer .scMenuBarItemActive > a:focus{
+	color: #fff;
+	outline: none;
+}
+.scContainer .scMenuBarItem:hover,
+.scContainer .scMenuBarItemHover{
+	background-color: #e98455;
+}
+.scContainer .scMenuBarItemHub:hover,
+.scContainer .scMenuBarItemHover.scMenuBarItemHub{
+	background: #e98455 url(../img/frontend/icon-arrow-down.png) right center no-repeat;
+}
+.scContainer .scMenuBarItem:hover > .scMenu,
+.scContainer .scMenuBarItemHover > .scMenu{
+	display: block;
+}
+.scContainer .scMenuBarItem:hover > a:link,
+.scContainer .scMenuBarItem:hover > a:visited,
+.scContainer .scMenuBarItem:hover > a:active,
+.scContainer .scMenuBarItem:hover > a:hover,
+.scContainer .scMenuBarItem:hover > a:focus,
+.scContainer .scMenuBarItemHover > a:link,
+.scContainer .scMenuBarItemHover > a:visited,
+.scContainer .scMenuBarItemHover > a:active,
+.scContainer .scMenuBarItemHover > a:hover,
+.scContainer .scMenuBarItemHover > a:focus{
+	color: #fff;
+	outline: none;
+}
+
+.scContainer .scMenu{
+	min-width: 100%;
+	z-index: 1;
+}
+.scContainer .scMenu a:link,
+.scContainer .scMenu a:visited,
+.scContainer .scMenu a:active,
+.scContainer .scMenu a:hover{
+	color: #fff;
+	outline: none;
+	white-space: nowrap;
+}
+.scContainer .scMenuItem{
+	background-color: #e98455;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.scContainer .scMenuItemHub{
+	background: #e98455 url(../img/frontend/icon-arrow-right.png) right center no-repeat;
+}
+.scContainer .scMenuItem .scMenu{
+	display: none;
+	position: absolute;
+	left: 100%;
+	top: 0;
+}
+.scContainer .scMenuItemHover > .scMenu{
+	display: block;
+}
+.scContainer .scMenuItemHover > a:link,
+.scContainer .scMenuItemHover > a:visited,
+.scContainer .scMenuItemHover > a:active,
+.scContainer .scMenuItemHover > a:hover{
+	color: #fff;
+	outline: none;
+}
+
+/* Account menu */
+.scContainer .scAccountMenu{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	height: 40px;
+	float: right;
+}
+.scContainer .scAccountMenu li{
+	float: right;
+	border-left: solid 1px #1c2024;
+	margin: 0 0 0 4px;
+}
+.scContainer .scAccountMenu li:last-child{
+	border-left: none;
+}
+.scContainer .scAccountMenu li a:link,
+.scContainer .scAccountMenu li a:active,
+.scContainer .scAccountMenu li a:visited{
+	background: none;
+	border-right: solid 1px #343a40;
+	color: #B4B4B4;
+	line-height: 40px;
+	padding: 0 5px;
+	text-transform: none;
+	text-decoration: none;
+}
+.scContainer .scAccountMenu li a:last-child{
+	border: none;
+}
+.scContainer .scAccountMenu li a:hover{
+	text-decoration: underline;
+}
+/* Header */
+.scContainer .scHeader{
+	overflow: hidden;
+	background-color: #292f35;
+	position: relative;
+}
+.scContainer .scHeaderLimiter{
+	display: none;
+}
+.scContainer .scHeaderClear{
+	clear: both;
+}
+.scContainer .scHeaderTop{
+	background-color: #292f35;
+	height: 40px;
+	overflow: hidden;
+}
+.scContainer .scHeaderMid{
+	background-color: #1c2024;
+	height: 43px;
+	overflow: hidden;
+}
+.scContainer .scHeaderCategoryClear{
+	clear: both;
+}
+.scContainer .scHeaderCategory{
+	background-color: #e98455;
+	overflow: visible;
+	height: 48px;
+}
+.scContainer .scHeaderCategory .scCartMenu{
+	float: right;
+}
+.scContainer .scMenuBar{
+	float: left;
+}
+.scContainer .scMenuDropdown{
+	clear: both;
+	background: olive;
+	margin: 0 0 15px;
+	width: 100%;
+}
+.scContainer .scMenuDropdown .scSelect{
+	background-color: #e98455;
+	border: none;
+	color: #fff;
+}
+/* Search form */
+.scContainer .scSearchForm{
+	float: left;
+	width: 65%;
+}
+.scContainer .scSearchFormInput{
+	background: #343a40 url(../img/frontend/layout-2/sc-icon-search.png) 10px 6px no-repeat;
+	border: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #757474;
+	font: normal 14px/16px LatoRegular, sans-serif;
+	outline: none;
+	padding: 0 0 0 8px;
+	height: 27px;
+	width: 100%;
+	text-indent: 25px;
+	text-transform: lowercase;
+}
+/* Checkout/Cart menu */
+.scContainer .scCartMenu{
+	background-color: #1c2024;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	height: 43px;
+	overflow: hidden;
+	width: auto;
+}
+.scContainer .scCartMenu li{
+	background-color: #1c2024;
+	border: none;
+	border-right: solid 1px #292f35;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	height: 43px;
+	/*width: 33%;*/
+	white-space: nowrap;
+}
+.scContainer .scCartMenu li:nth-child(even){
+	/*width: 25%;*/
+}
+.scContainer .scCartMenu li:last-child{
+	border-right: none;
+	/*width: 35%;*/
+}
+.scContainer .scCartMenu li.scCartMenuIcon{
+	background: #1c2024 url(../img/frontend/layout-2/sc-icon-cart.png) left center no-repeat;
+	/*width: 40%;*/
+}
+.scContainer .scCartMenu li a:link,
+.scContainer .scCartMenu li a:active,
+.scContainer .scCartMenu li a:visited,
+.scContainer .scCartMenu li a:hover{
+	background: none;
+	color: #f0f0f0;
+	line-height: 43px;
+	display: inline-block;
+	padding: 0 10px;
+	text-decoration: none;
+}
+.scContainer .scCartMenu li .scColorOrange{
+	color: #f0f0f0 !important;
+}
+.scContainer .scCartMenu li.scCartMenuIcon a{
+	text-indent: 35px;
+}
+
+/* Buttons & Links */
+.scContainer .scButton,
+.scContainer a.scButton{
+	border: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: inline-block;
+	font: normal 20px LatoBlack, Arial, sans-serif; 
+	height: 49px;
+	line-height: 49px;
+	margin: 0;
+	padding: 0 10px;
+	text-align: center;
+	text-decoration: none !important;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+.scContainer .scButtonDark,
+.scContainer .scButtonDark:link,
+.scContainer .scButtonDark:visited{
+	background-color: #f38f60;
+	color: #fff;
+	text-shadow: 0 -1px 1px rgba(159,69,27,0.28);
+}
+.scContainer .scButtonDark:active,
+.scContainer .scButtonDarkActive{
+	background-color: #F38E5F;
+	line-height: 50px;
+}
+.scContainer .scButtonDark:hover,
+.scContainer .scButtonDarkHover{
+	background-color: #EF6D30;
+	color: #fff;
+}
+.scContainer .scButtonDark:focus,
+.scContainer .scButtonDarkFocus{
+	color: #fff;
+	outline: none;
+}
+.scContainer .scButtonDark:disabled,
+.scContainer .scButtonDarkDisabled{
+	background-color: #e7e7e7;
+	color: #bfbfbf;
+	cursor: default;
+	text-shadow: 1px 1px 1px #fff;
+	line-height: 49px;
+}
+.scContainer .scButtonDarkCart{
+	background: #f38f60 url(../img/frontend/layout-2/sc-btn-cart-orange.png) right top no-repeat;
+	padding-right: 55px;	
+}
+.scContainer .scButtonDarkCart:disabled{
+	background-image: url(../img/frontend/layout-2/sc-btn-cart-gray.png);
+}
+.scContainer .scButtonDarkNext{
+	background: #f38f60 url(../img/frontend/layout-2/sc-btn-right-orange.png) right top no-repeat;
+	padding-right: 55px;	
+}
+.scContainer .scButtonDarkNext:disabled{
+	background-image: url(../img/frontend/layout-2/sc-btn-right-gray.png);
+}
+.scContainer .scButtonDarkDel{
+	background: #f38f60 url(../img/frontend/layout-2/sc-btn-del-orange.png) right top no-repeat;
+	padding-right: 55px;	
+}
+.scContainer .scButtonDarkDel:disabled{
+	background-image: url(../img/frontend/layout-2/sc-btn-del-gray.png);
+}
+
+.scContainer .scButtonLight,
+.scContainer .scButtonLight:link,
+.scContainer .scButtonLight:visited{
+	background-color: #32b4e9;
+	color: #fff;
+	font: normal 18px/49px LatoBold, Arial, sans-serif; 
+	text-transform: none;
+	text-shadow: 0 -1px 1px rgba(5,79,148,0.28);
+}
+.scContainer .scButtonLight:active,
+.scContainer .scButtonLightActive{
+	background-color: #60C5EE;
+	line-height: 50px;
+}
+.scContainer .scButtonLight:hover,
+.scContainer .scButtonLightHover{
+	background-color: #169CD2;
+	color: #fff;
+}
+.scContainer .scButtonLight:focus,
+.scContainer .scButtonLightFocus{
+	color: #fff;
+	outline: none;
+}
+.scContainer .scButtonLight:disabled,
+.scContainer .scButtonLightDisabled{
+	background-color: #e7e7e7;
+	color: #bfbfbf;
+	cursor: default;
+	text-shadow: 1px 1px 1px #fff;
+}
+.scContainer .scButtonLightPrev{
+	background: #32b4e9 url(../img/frontend/layout-2/sc-btn-left-blue.png) left top no-repeat;
+	padding-left: 55px;	
+}
+.scContainer .scButtonLightPrev:disabled{
+	background-image: url(../img/frontend/layout-2/sc-btn-left-gray.png);
+}
+.scContainer .scButtonLightPlus{
+	background: #32b4e9 url(../img/frontend/layout-2/sc-btn-plus-blue.png) left top no-repeat;
+	padding-left: 55px;	
+}
+.scContainer .scButtonLightPlus:disabled{
+	background-image: url(../img/frontend/layout-2/sc-btn-plus-gray.png);
+}
+
+/* General */
+.scContainer .scColorOrange{
+	color: #f16b12 !important;
+}
+.scContainer .scColorBlue{
+	color: #25a9df !important;
+}
+.scContainer .scColorGray{
+	color: #babcbe !important;
+}
+.scContainer h1.scHeading{
+	color: #292f35;
+	font: normal 30px LatoBlack, Arial, sans-serif;
+	margin: 15px 0 10px;
+	padding: 0;
+	text-transform: none;
+}
+.scContainer h3.scHeading{
+	color: #21282e;
+	font: normal 18px/18px LatoBold, Arial, sans-serif;
+	margin: 20px 0 15px;
+	padding: 0;
+	text-transform: none;
+}
+/* Paper */
+.scContainer .scPaper{
+	background-color: #fff;
+	overflow: hidden;
+}
+.scContainer .scPaperSidebar{
+	float: left;
+	width: 24%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.scContainer .scPaperSidebarText{
+	padding: 20px;
+}
+.scContainer .scPaperSheet{
+	background-color: #fff;
+	float: right;
+	width: 76%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.scContainer .scPaperControl{
+	background-color: #fff;
+	float: right;
+	width: 76%;
+}
+.scContainer .scPaperControlInner{
+	padding: 0 0 20px 30px;
+	text-align: right;
+}
+.scContainer .scPaperHeading{
+	background-color: #fff;
+	color: #25a9df;
+	font: normal 16px LatoBlack, Arial, sans-serif;
+	padding: 15px 30px;
+	text-transform: uppercase;
+}
+.scContainer .scPaperHeadingTop{
+}
+.scContainer .scPaperContent{
+	overflow: hidden;
+	padding: 5px 30px 5px;
+}
+.scContainer .scPaperChain{
+	float: left;
+	width: 50%;
+	margin: 0 0 25px;
+	overflow: hidden;
+	padding: 0;
+}
+.scContainer .scPaperUnchained{
+	clear: left;
+	margin: 0 0 25px;
+	overflow: hidden;
+	padding: 0;
+}
+.scContainer .scPaperChain .scUpperCase,
+.scContainer .scPaperUnchained .scUpperCase{
+	text-transform: none !important;
+}
+.scContainer .scPaperContent .scPaperChain:nth-child(odd){
+	clear: left;
+}
+.scContainer .scCheckoutTable{
+	border: solid 3px #efeceb;
+	margin: 17px 0 0;
+	text-transform: none;
+	width: 100%;
+}
+.scContainer .scCheckoutTable td{
+	padding: 5px;
+}
+.scContainer .scCheckoutTableProduct{
+	text-align: right;
+}
+.scContainer .scCheckoutTableProductName{
+	color: #333;
+	font: normal 16px/22px LatoBold, Arial, sans-serif;
+}
+.scContainer .scCheckoutTableLabel{
+	color: #292f35;
+	font: normal 16px/28px LatoRegular, Arial, sans-serif;
+	text-align: right;
+	width: 45%;
+}
+.scContainer .scCheckoutTableTotalLabel{
+	font: normal 18px/28px LatoBold, Arial, sans-serif;
+}
+.scContainer .scCheckoutTableValue{
+	color: #292f35;
+	font: normal 16px/28px LatoBold, Arial, sans-serif;
+	text-align: right;
+}
+.scContainer td.scCheckoutTableValue{
+	padding-right: 15px;
+}
+.scContainer .scCheckoutTableTotal{
+	font: normal 20px/28px LatoBold, Arial, sans-serif;
+}
+.scContainer .scAddressHolder{
+	overflow: hidden;
+}
+.scContainer .scAddressHolder:not(:first-child){
+	border-top: solid 2px #ECE8E8;
+	padding-top: 15px;
+}
+/* Locale menu */
+.scContainer .scLocaleMenu{
+	margin: 0;
+	padding: 0;
+	height: 48px;
+	list-style: none;
+	float: right;
+	border: none;
+}
+.scContainer .scLocaleMenu li{
+	display: inline-block;
+	margin: 0;
+	width: 34px;
+	height: 48px;
+}
+.scContainer .scLocaleMenu li:not(:last-child){
+	border-right: solid 1px #f39c73;
+}
+.scContainer .scLocaleMenu li a{
+	color: #7e4f3a;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	
+	display: inline-block;
+	width: 33px;
+	position: relative;
+	text-decoration: none;
+}
+.scContainer .scLocaleMenu li a img{
+	border: none;
+	position: absolute;
+	height: 0;
+	width: 0;
+}
+.scContainer .scLocaleMenu li a:hover{
+	
+}
+.scContainer .scLocaleMenu li a:active, 
+.scContainer .scLocaleMenu li a:focus, 
+.scContainer .scLocaleMenu li a.scLocaleFocus{
+	color: #fff;
+}
+/*.scContainer .scLocaleMenu li:not(:last-child) a:after {
+	content: " /";
+}*/
+/* Notice & Messages */
+.scContainer .scNotice{
+	margin: 0 0 10px;
+	position: relative;
+	padding: 16px 19px;
+	text-transform: uppercase;
+}
+.scContainer .scNoticeIcon{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 4px;
+}
+.scContainer .scNoticeError .scNoticeIcon{background-color: #f6cccd;}
+.scContainer .scNoticeSuccess .scNoticeIcon{background-color: #99d3a1;}
+.scContainer .scNoticeInfo .scNoticeIcon{background-color: #d3cba4;}
+.scContainer .scNoticeError{
+	background-color: #feeaeb;
+	border: solid 1px #f6cccd;
+	color: #c54b4a;
+}
+.scContainer .scNoticeSuccess{
+	background-color: #e4f5e3;
+	border: solid 1px #99d3a1;
+	color: #6fa478;
+}
+.scContainer .scNoticeInfo{
+	background-color: #faf4d2;
+	border: solid 1px #d3cba4;
+	color: #b6a452;
+}
+.scContainer .scMessage{
+	background-color: #f1f1f1;
+	padding: 23px 18px; 
+	position: relative;
+	text-transform: uppercase;
+}
+.scContainer .scMessage .scMessageIcon{
+	background-color: #dadada;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 4px;
+}
+
+.scContainer .scBreadcrumb{
+	margin: 0 0 10px;
+}
+.scContainer .scBreadcrumb li{
+	display: inline-block;
+	font: normal 14px/24px LatoBold, Arial, sans-serif;
+	color: #292f35;
+	position: relative;
+	text-transform: none;
+}
+.scContainer .scBreadcrumb li:not(:first-child){
+	margin: 0 0 0 -6px;
+}
+.scContainer .scBreadcrumb li.scBreadcrumbActive{
+	margin: 0 0 0 5px;
+}
+.scContainer .scBreadcrumb a:link,
+.scContainer .scBreadcrumb a:visited,
+.scContainer .scBreadcrumb a:active,
+.scContainer .scBreadcrumb a:hover,
+.scContainer .scBreadcrumb a:focus{
+	background-color: #eae6e4;
+	color: #25a9df;
+	font: normal 14px/24px LatoRegular, Arial, sans-serif;
+	margin: 0 9px;
+	padding: 0 5px;
+	display: inline-block;
+	height: 24px;
+	text-decoration: none;
+}
+.scContainer .scBreadcrumbFirst,
+.scContainer .scBreadcrumbLeft,
+.scContainer .scBreadcrumbRight{
+	position: absolute;
+	top: 0;
+	display: inline-block;
+	width: 9px;
+	height: 24px;
+}
+.scContainer .scBreadcrumbFirst{
+	background-color: #eae6e4;
+	-moz-border-radius: 4px 0 0 4px;
+	-webkit-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px;
+}
+.scContainer .scBreadcrumbLeft{
+	left: 0;
+	background: url(../img/frontend/layout-2/sc-breadcrumbs-left.png) 0 0 no-repeat;
+}
+.scContainer .scBreadcrumbRight{
+	right: 0;
+	background: url(../img/frontend/layout-2/sc-breadcrumbs-right.png) 0 0 no-repeat;
+}
+
+.scContainer .scInterMenu{
+	float: left;
+	width: 60%;
+	overflow: hidden;
+}
+.scContainer .scInterMenu a{
+	margin: 8px 0 0 12px;
+}
+
+.scContainer .scSocialMenu{
+	float: right;
+	max-width: 40%;
+	width: auto;
+	padding: 7px 0 0 0;
+	overflow: hidden;
+}
+.scContainer a.scSocial{
+	display: inline-block;
+	float: left;
+	width: 22px;
+	height: 21px;
+	margin: 0 5px 0 0;
+	padding: 0;
+}
+.scContainer a.scSocialFacebook{
+	background: url(../img/frontend/social-facebook.png) 0 0 no-repeat;
+}
+.scContainer a.scSocialGoogle{
+	background: url(../img/frontend/social-google.png) 0 0 no-repeat;
+}
+.scContainer a.scSocialTwitter{
+	background: url(../img/frontend/social-twitter.png) 0 0 no-repeat;
+}
+.scContainer a.scSocialLinkedIn{
+	background: url(../img/frontend/social-linkedin.png) 0 0 no-repeat;
+}
+.scContainer a.scSocial:hover{
+	background-position: 0 -21px;
+}
+
+.scContainer .scHTML strong,
+.scContainer .scHTML b{
+	font-weight: bold;
+}
+.scContainer .scHTML em,
+.scContainer .scHTML i{
+	font-style: italic;
+}
+.scContainer .scHTML u{
+	text-decoration: underline;
+}
+.scContainer .scHTML ul{
+	list-style: disc;
+	list-style-position: inside;
+}
+.scContainer .scHTML ol{
+	list-style: decimal;
+	list-style-position: inside;
+}
+.scContainer .scHTML sup{
+	vertical-align: super;
+	font-size: 0.8em;
+}
+.scContainer .scHTML sub{
+	vertical-align: sub;
+	font-size: 0.8em;
+}
+.scContainer .scHTML table,
+.scContainer .scHTML th,
+.scContainer .scHTML td{
+	border-width: 1px;
+	border-style: solid;
+	border-collapse: separate;
+}
+.scContainer .scHTML h1{font-weight: bold; font-size: 1.4em}
+.scContainer .scHTML h2{font-weight: bold; font-size: 1.3em}
+.scContainer .scHTML h3{font-weight: bold; font-size: 1.2em}
+.scContainer .scHTML h4{font-weight: bold; font-size: 1.1em}
+.scContainer .scHTML h5{font-weight: bold; font-size: 1em}
+.scContainer .scHTML h6{font-weight: bold; font-size: 0.9em}
+/* Responsive design */
+@media screen and (max-width: 479px) {
+	.scContainer{
+		width: 100%;
+	}
+	.scContainer .scHeaderTop .scCartMenu{
+		display: none;
+	}
+	.scContainer .scHeaderCategory{
+		display: none;
+	}
+	.scContainer .scSearchForm{
+		float: left;
+		margin: 8px 0 0;
+		height: 27px;
+		width: 20%;
+	}
+	.scContainer .scSearchFormInput{
+		width: 95%;
+		margin: 0 0 0 14px;
+	}
+	.scContainer .scAccountMenu{
+		float: right;
+		margin: 0;
+		width: 80%;
+	}
+	.scContainer .scSearchFormInput{
+		width: 100%;
+	}
+	.scContainer .scLocaleMenu{
+		float: left;
+		height: 43px;
+		width: 25%;
+	}
+	.scContainer .scLocaleMenu li:not(:last-child){
+		border-right: solid 1px #292f35;
+	}
+	.scContainer .scLocaleMenu li a{
+		color: #6c7277;
+		height: 43px;
+	}
+	.scContainer .scCartMenu{
+		float: right;
+		width: 75%;
+	}
+	.scContainer .scCartMenu li{
+		width: 30%;
+	}
+	.scContainer .scCartMenu li:first-child{
+		width: 40%;
+	}
+	.scContainer .scProductItem{
+		float: none;
+		width: auto;
+		height: 270px;
+		border: none;
+	}
+	.scContainer .scProductSimilarBox{
+		height: auto;
+		overflow: visible;
+	}
+	.scContainer .scProductSimilar{
+		float: none;
+		height: 264px;
+		margin: 0 0 10px;
+		width: auto;
+		border: none;
+	}
+	.scContainer .scProductSimilarPic img{
+		max-height: 158px;
+	}
+	.scContainer .scProductGallery{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scProductInfo{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scProductInfoInner{
+		margin: 0;
+	}
+	.scContainer .scProductHeadingBox{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scTable1BodyRow{
+		min-height: 120px;
+		height: auto !important;
+		height: 120px;
+	}
+	.scContainer .scTable1ThDel, 
+	.scContainer .scTable1TdDel{
+		width: 20%;
+	}
+	.scContainer .scTable1ThDel .scTable1Th, 
+	.scContainer .scTable1TdDel .scTable1Td{
+		padding: 6px 3px;
+	}
+	.scContainer .scTable1TdPic{
+		width: 22%;
+	}
+	.scContainer .scTable1TdPic img{
+		/*max-width: 45px;*/
+	}
+	.scContainer .scTable1TdName{
+		width: 58%;
+	}
+	.scContainer .scTable1ThName{
+		display: none;
+		width: 0;
+	}
+	.scContainer .scTable1TdPrice{
+		clear: left;
+		width: 42%;
+	}
+	.scContainer .scTable1ThPrice{
+		display: none;
+		width: 0;
+	}
+	.scContainer .scTable1ThNamePrice{
+		display: block;
+		width: 22%;
+	}
+	.scContainer .scTable1ThQty, 
+	.scContainer .scTable1TdQty{
+		width: 26%;
+		max-width: none;
+	}
+	.scContainer .scTable1ThQty{
+		text-align: right;
+	}
+	.scContainer .scProductSpinner{
+		float: right;
+	}
+	.scContainer .scTable1ThTotal, 
+	.scContainer .scTable1TdTotal{
+		width: 32%;
+	}
+	.scContainer .scTable1TdFootLabel{
+		width: 50%;
+	}
+	.scContainer .scTable1TdFootValue{
+		width: 50%;
+	}
+	.scContainer .scPaperSidebar{
+		float: none;
+		width: auto;
+		border-bottom: solid 1px #ece8e8;
+	}
+	.scContainer .scCheckoutTableLabel{
+		width: 45%;
+	}
+	.scContainer .scCheckoutTableValue{
+		width: 55%;
+	}
+	.scContainer .scTable1TdFootValue .scSelect{
+		width: 80%;
+	}
+	.scContainer .scTable1TdFootValue .scText{
+		width: 70%;
+	}
+	.scContainer .scPaperSheet,
+	.scContainer .scPaperControl{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scPaperSheet .scPaperChain{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scPaperSheet .scText,
+	.scContainer .scPaperSheet .scTextarea{
+		width: 90%;
+	}
+	.scContainer .scPaperSheet .scSelect{
+		width: 90%;
+	}
+	.scContainer .scPaperSheet .scTextarea{
+		height: 110px;
+	}
+	.scContainer .scSelectorSend2FriendBox .scPaperChain{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scSelectorSend2FriendBox .scText{
+		width: 90%;
+	}
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+	.scContainer{
+		width: 100%;
+	}
+	.scContainer .scHeaderTop .scCartMenu{
+		display: none;
+	}
+	.scContainer .scHeaderCategory{
+		display: none;
+	}
+	.scContainer .scHeaderLimiter3{
+		/*display: block;
+		clear: both;*/
+	}
+	.scContainer .scLocaleMenu{
+		float: left;
+		height: 43px;
+	}
+	.scContainer .scLocaleMenu li:not(:last-child){
+		border-right: solid 1px #292f35;
+	}
+	.scContainer .scLocaleMenu li a{
+		color: #6c7277;
+		height: 43px;
+	}
+	.scContainer .scCartMenu{
+		float: right;
+	}
+	.scContainer .scAccountMenu{
+		float: right;
+		width: 50%;
+	}
+	.scContainer .scSearchForm{
+		float: left;
+		margin: 8px 0 0;
+		height: 27px;
+		width: 50%;
+	}
+	.scContainer .scSearchFormInput{
+		width: 95%;
+		margin: 0 0 0 14px;
+	}
+	.scContainer .scProductItem{
+		float: none;
+		height: 205px;
+		width: auto;
+		border: none;
+	}
+	.scContainer .scProductItemPic{
+		float: left;
+		width: 50%;
+		border-right: solid 1px #e7e7e7;
+	}
+	.scContainer .scProductItemInfo{
+		float: right;
+		margin: 10px 0;
+		overflow: hidden;
+		text-align: left;
+		width: 49%;
+	}
+	.scContainer .scProductItemName{
+		position: static;
+		margin: 60px 10px 10px;
+		width: auto;
+	}
+	.scContainer .scProductItemName a:link, 
+	.scContainer .scProductItemName a:active, 
+	.scContainer .scProductItemName a:visited, 
+	.scContainer .scProductItemName a:hover, 
+	.scContainer .scProductItemName a:focus{
+		padding: 0;
+	}
+	.scContainer .scProductItemPrice{
+		position: static;
+		margin: 0 10px 10px;
+		width: auto;
+	}
+	.scContainer .scProductItemButtons{
+		position: static;
+		margin: 0 10px;
+		width: auto;
+	}
+	.scContainer .scProductItem:hover .scProductItemButtons,
+	.scContainer .scProductItemHover .scProductItemButtons{
+		position: absolute;
+		top: 78px;
+		left: 15%;
+		height: 49px;
+	}
+	.scContainer .scProductSimilarBox{
+		height: auto;
+		overflow: visible;
+	}
+	.scContainer .scProductSimilar{
+		float: none;
+		height: 184px;
+		margin: 0 0 50px;
+		width: auto;
+		border: none;
+	}
+	.scContainer .scProductSimilarPic{
+		float: left;
+		width: 49%;
+		border-right: solid 1px #efeceb;
+	}
+	.scContainer .scProductSimilarPic img{
+		max-height: 164px;
+	}
+	.scContainer .scProductSimilarInfo{
+		float: right;
+		text-align: left;
+		width: 50%;
+	}
+	.scContainer .scProductSimilarName{
+		position: static;
+		margin: 55px 10px 0;
+		width: auto;
+	}
+	.scContainer .scProductSimilarPrice{
+		position: static;
+		margin: 15px 10px 0;
+		width: auto;
+	}
+	.scContainer .scProductGallery{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scProductInfo{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scProductInfoInner{
+		margin: 0;
+	}
+	.scContainer .scProductHeadingBox{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scTable1BodyRow{
+		min-height: 120px;
+		height: auto !important;
+		height: 120px;
+	}
+	.scContainer .scTable1ThDel, 
+	.scContainer .scTable1TdDel{
+		width: 12.5%;
+	}
+	.scContainer .scTable1TdPic{
+		width: 12%;
+	}
+	.scContainer .scTable1TdPic img{
+		/*max-width: 45px;*/
+	}
+	.scContainer .scTable1TdName{
+		width: 75.5%;
+	}
+	.scContainer .scTable1ThName{
+		display: none;
+		width: 0;
+	}
+	.scContainer .scTable1TdPrice{
+		clear: left;
+		width: 37%;
+	}
+	.scContainer .scTable1ThPrice{
+		display: none;
+		width: 0;
+	}
+	.scContainer .scTable1ThNamePrice{
+		display: block;
+		width: 24.5%;
+	}
+	.scContainer .scTable1ThQty, 
+	.scContainer .scTable1TdQty{
+		width: 34%;
+		max-width: none;
+		text-align: right;
+	}
+	.scContainer .scTable1ThQty{
+		text-align: right;
+	}
+	.scContainer .scProductSpinner{
+		float: right;
+	}
+	.scContainer .scTable1ThTotal, 
+	.scContainer .scTable1TdTotal{
+		width: 29%;
+	}
+	.scContainer .scTable1TdFootLabel{
+		width: 60%;
+	}
+	.scContainer .scTable1TdFootValue{
+		width: 40%;
+	}
+	.scContainer .scPaperSidebar{
+		float: none;
+		width: auto;
+		border-bottom: solid 1px #ece8e8;
+	}
+	.scContainer .scCheckoutTableLabel{
+		width: 30%;
+	}
+	.scContainer .scCheckoutTableValue{
+		width: 70%;
+	}
+	.scContainer .scPaperSheet,
+	.scContainer .scPaperControl{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scPaperSheet .scPaperChain{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scPaperSheet .scText,
+	.scContainer .scPaperSheet .scTextarea{
+		width: 95%;
+	}
+	.scContainer .scPaperSheet .scSelect{
+		width: 98.7%;
+	}
+	.scContainer .scPaperSheet .scTextarea{
+		height: 110px;
+	}
+	.scContainer .scSelectorSend2FriendBox .scText{
+		width: 88%;
+	}
+}
+@media screen and (min-width: 480px) and (max-width: 622px) {
+	/*.scContainer .scCartMenu{
+		width: 100%;
+	}
+	.scContainer .scCartMenu li{
+		width: 33%;
+	}
+	.scContainer .scAccountMenu{
+		width: 60%;
+	}*/
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.scContainer{
+		width: 100%;
+	}
+	.scContainer .scHeaderMid{
+		display: none;
+	}
+	.scContainer .scAccountMenu{
+		float: right;
+	}
+	.scContainer .scCartMenu{
+		float: right;
+	}
+	.scContainer .scMenuDropdown{
+		display: none;
+	}
+	.scContainer .scProductItem{
+		width: 33%;
+	}
+	.scContainer .scProductItem:nth-child(3n+2){
+		border-right: none;
+	}
+	.scContainer .scProductSimilar{
+		width: 24%;
+	}
+	.scContainer .scProductGallery{
+		width: 43%;
+	}
+	.scContainer .scProductInfo{
+		width: 57%;
+	}
+	.scContainer .scProductHeadingBox{
+		width: 57%;
+	}
+	.scContainer .scTable1ThDel, 
+	.scContainer .scTable1TdDel{
+		width: 8%;
+	}
+	.scContainer .scTable1TdPic{
+		width: 11%;
+	}
+	.scContainer .scTable1TdName{
+		width: 36%;
+	}
+	.scContainer .scTable1ThName{
+		width: 47%;
+	}
+	.scContainer .scTable1ThPrice, 
+	.scContainer .scTable1TdPrice{
+		width: 14%;
+	}
+	.scContainer .scTable1ThQty, 
+	.scContainer .scTable1TdQty{
+		width: 13%;
+		max-width: none;
+	}
+	.scContainer .scTable1ThTotal, 
+	.scContainer .scTable1TdTotal{
+		width: 18%;
+	}
+	.scContainer .scTable1TdFootLabel{
+		width: 65%;
+	}
+	.scContainer .scTable1TdFootValue{
+		width: 35%;
+	}
+	.scContainer .scPaperSidebar{
+		width: 35%;
+	}
+	.scContainer .scPaperSheet,
+	.scContainer .scPaperControl{
+		width: 65%;
+	}
+	.scContainer .scPaperSheet .scPaperChain{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scPaperSheet .scText,
+	.scContainer .scPaperSheet .scTextarea{
+		width: 95%;
+	}
+	.scContainer .scPaperSheet .scSelect{
+		width: 98.7%;
+	}
+	.scContainer .scPaperSheet .scTextarea{
+		height: 110px;
+	}
+	.scContainer .scSelectorSend2FriendBox .scPaperChain{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scSelectorSend2FriendBox .scText{
+		width: 90%;
+	}
+	.scContainer .scHeaderLimiter2{
+		/*display: block;
+		clear: right;*/
+	}
+	.scContainer .scSearchForm{
+		float: left;
+		margin: 8px 0 0;
+		height: 27px;
+		width: 30%;
+	}
+	.scContainer .scSearchFormInput{
+		width: 95%;
+		margin: 0 0 0 14px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.scContainer{
+		width: 100%;
+	}
+	.scContainer .scHeaderMid{
+		display: none;
+	}
+	.scContainer .scAccountMenu{
+		float: right;
+		width: 30%;
+	}
+	.scContainer .scCartMenu{
+		float: right;
+		width: 30%;
+	}
+	.scContainer .scSearchForm{
+		float: left;
+		margin: 8px 0 0;
+		height: 27px;
+		width: 40%;
+	}
+	.scContainer .scSearchFormInput{
+		width: 95%;
+		margin: 0 0 0 14px;
+	}
+	.scContainer .scMenuDropdown{
+		display: none;
+	}
+	.scContainer .scProductItem{
+		width: 25%;
+	}
+	.scContainer .scProductItem:nth-child(4n+1){
+		border-right: none;
+	}
+	.scContainer .scPaperSheet .scText,
+	.scContainer .scPaperSheet .scTextarea{
+		width: 90%;
+	}
+	.scContainer .scPaperSheet .scSelect{
+		width: 90%;
+	}
+	.scContainer .scPaperSheet .scTextarea{
+		height: 110px;
+		width: 97%;
+	}
+	.scContainer .scSelectorSend2FriendBox .scText{
+		width: 90%;
+	}
+	.scContainer .scHeaderLimiter3{
+		display: block;
+		clear: both;
+	}
+	.scContainer .scTable1TdFootValue .scSelect{
+		width: 90%;
+	}
+	.scContainer .scTable1TdFootValue .scText{
+		width: 80%;
+	}
+}

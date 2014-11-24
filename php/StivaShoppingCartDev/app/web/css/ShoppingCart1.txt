@@ -1,0 +1,13 @@
+@font-face {
+	font-family: ArchivoNarrowRegular;
+	src: url([URL]app/web/obj/ArchivoNarrow-Regular.ttf) format("truetype");
+}
+@font-face {
+	font-family: ArchivoNarrowBold;
+	font-weight: bold;
+	src: url([URL]app/web/obj/ArchivoNarrow-Bold.ttf) format("truetype");
+}
+@font-face {
+	font-family: PTSansRegular;
+	src: url([URL]app/web/obj/PT_Sans-Web-Regular.ttf) format("truetype");
+}

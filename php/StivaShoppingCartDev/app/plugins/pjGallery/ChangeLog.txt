@@ -1,0 +1,52 @@
+Version 1.0.3
+---------------------------------------
+	- changed:
+		+ database.sql (table schema of `plugin_gallery`)
+		
+		pjGallery.model.php
+		+ property $schema
+		+ method pjActionSetup
+		
+		pjGallery.controller.php
+		+ method pjActionCompressGallery
+		+ method pjActionEmptyGallery
+		+ method pjActionGetGallery
+		+ method pjActionRebuild
+		+ method pjActionRotateGallery
+		+ method pjActionUploadGallery
+		+ method pjActionWatermarkGallery
+		
+		* table records are selected by given 'foreign_id' XOR 'hash', instead of only by 'foreign_id'. 
+		Useful when upload images before you know 'foreign_id' of associated table. 
+
+		pjActionResizeGallery.php
+		+ labels
+		
+		pjGallery.js
+		+ noConflict use
+		
+		jquery.gallery.js
+		+ resizeUrl pattern
+
+Version 1.0.2
+---------------------------------------
+	- added pjGallery controller
+		+ property $imageCrop
+		+ property $imageFillColor
+		+ method __construct
+		+ method resizeSmart
+	- changed
+		+ method pjActionBuildFromSource
+		+ method pjActionUpdateGallery
+		+ method pjActionUploadGallery
+
+
+Version 1.0.1
+---------------------------------------
+	- 'pjGalleryAppController' extends 'pjPlugin' instead of 'pjAppController'
+	- start using pjLocale plugin
+
+
+Version 1.0.0
+---------------------------------------
+	- initial

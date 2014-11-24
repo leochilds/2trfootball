@@ -1,0 +1,347 @@
+@CHARSET "UTF-8";
+
+#phpevtcal_container{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #9c9ea1;
+	font-size: 12px;
+	margin: 10px;
+	width: 600px;
+}
+#phpevtcal_header{
+	overflow: hidden;
+	margin-bottom: 4px;
+}
+
+#phpevtcal_category{
+	float: left;
+}
+#phpevtcal_menu{
+	overflow: hidden;
+	float: right;
+}
+#phpevtcal_menu a{
+	display: block;
+	height: 25px;
+	float: right;
+	margin-left: 8px;
+	color: #448ad1;
+	padding-top: 10px;
+	text-indent: 28px;
+	text-decoration: none;
+}
+#phpevtcal_menu a.phpevtcal-monthly{
+	background: url(../img/frontend/layout_3/monthly.png) 0 0 no-repeat;
+	width: 107px;
+}
+#phpevtcal_menu a.phpevtcal-calendar{
+	background: url(../img/frontend/layout_3/calendar.png) 0 0 no-repeat;
+	width: 112px;
+}
+#phpevtcal_menu a.phpevtcal-list{
+	background: url(../img/frontend/layout_3/list.png) 0 0 no-repeat;
+	width: 82px;
+}
+.phpevtcal-select{
+	background-color: #ffffff;
+    border: 1px solid #e6e1e1;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 14px;
+    padding: 9px 6px;
+}
+
+.phpevtcal-nav-bar{
+	height: 56px;
+	background-color: #494747;
+	margin-bottom: 2px;
+}
+.phpevtcal-nav-bar a{
+	display: block;
+	width: 26px;
+	height: 27px;
+	margin-top: 14px;
+}
+.phpevtcal-nav-bar a.prev{
+	float: left;
+	background: url(../img/frontend/layout_3/prev.png) 0 0 no-repeat;
+	margin-left: 12px;
+}
+.phpevtcal-nav-bar a.next{
+	float: right;
+	background: url(../img/frontend/layout_3/next.png) 0 0 no-repeat;
+	margin-right: 12px;
+}
+.phpevtcal-nav-bar .month-name{
+	display: block;
+	float: left;
+	color: #ffffff;
+	font-size: 18px;
+	margin-left: 80px;
+	margin-top: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.phpevtcal-month-bar{
+	overflow: hidden;
+	margin-bottom: 2px;
+}
+.phpevtcal-month-bar a{
+	width: 42px;
+	height: 25px;
+	text-align: center;
+	color: #7c7979;
+	text-transform: uppercase;
+	display: block;
+	float: left;
+	margin-right: 2px;
+	border: 1px solid #d9d5d5;
+	background-color: #f5f5f5;
+	text-decoration: none;
+	font-weight: bold;
+}
+.phpevtcal-month-bar a span{
+	display: block;
+	margin-top: 4px;
+}
+.phpevtcal-month-bar a.current{
+	border: 1px solid #494747;
+	background-color: #494747;
+	cursor: default;
+	color: #ffffff;
+}
+.phpevtcal-event-table{
+	font-size: 12px;
+	color: #7c7979;
+	border-spacing: 0;
+	border-collapse: collapse;
+	width: 100%;
+}
+.phpevtcal-event-table td{
+	padding: 8px 5px 8px 5px;
+	margin: 0;
+	border-bottom: 1px solid #d6d5d5;
+	background-color: #f6f6f6;
+}
+.phpevtcal-event-table td.day-num{
+	width: 30px;
+	text-align: right;
+	color: #7c7979;
+}
+.phpevtcal-event-table td.day-week{
+	width: 80px;
+	color: #7c7979;
+}
+.phpevtcal-event-table td.start-time{
+	width: 60px;
+}
+.phpevtcal-event-table tr.current-date td.day-num,
+.phpevtcal-event-table tr.current-date td.day-week{
+	background-color: #d43f77;
+	color: #ffffff;
+}
+.phpevtcal-event-table tr.has-event td.day-num,
+.phpevtcal-event-table tr.has-event td.day-week{
+	background-color: #3883cf;
+	border-bottom: 1px solid #3883cf;
+	color: #000000;
+}
+.phpevtcal-event-table tr.has-event td.day-num,
+.phpevtcal-event-table tr.has-event td.day-week{
+	color: #ffffff;
+}
+.phpevtcal-event-table tr.has-event td.start-time{
+	color: #313131;
+	font-weight: bold;
+}
+.phpevtcal-event-table tr.has-event td label{
+	display: block;
+	color: #1075ba;
+	font-size: 13px;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+.phpevtcal-event-table tr.has-event td label span{
+	color: #313131;
+}
+/********Calendar view************/
+.phpevtcal-table-calendar{
+	width: 100%;
+	font-size: 12px;
+	color: #9c9ea1;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+.phpevtcal-table-calendar td{
+	padding: 5px;
+	margin: 0;
+}
+
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav{
+	
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td{
+	height: 46px;
+	background-color: #494747;
+	border: none;
+	color: #ffffff;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-space td{
+	height: 2px;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td.current-month{
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td a{
+	display: block;
+	height: 27px;
+	width: 27px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td a.prev{
+	float: left;
+	background: url(../img/frontend/layout_3/prev.png) 0 0 no-repeat;
+	margin-left: 8px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td a.next{
+	float: right;
+	background: url(../img/frontend/layout_3/next.png) 0 0 no-repeat;
+	margin-right: 8px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-weekday td{
+	height: 28px;
+	color: #7c7979;
+	text-transform: uppercase;
+	text-align: center;
+	border-color: #505459;
+	background-color: #6c7078;
+	font-weight: bold;
+	background: url(../img/frontend/layout_3/weekday-bg.png) 0 0 repeat-x;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td{
+	height: 60px;
+	width: 94px;
+	text-align: center;
+	color: #858282;
+	font-size: 16px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td.last-month-day,
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td.next-month-day{
+	color: #d9d9d9;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td.current-date{
+	background-color: #d43f77;
+	color: #ffffff;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td.has-event{
+	background-color: #3883cf;
+	color: #ffffff;
+	cursor: pointer;
+}
+.phpevtcal-table-calendar .phpevtcal-tooltip{
+	background-color: #494747;
+	color: #e5e1e1;
+	font-size:12px;
+	text-align: left;
+	
+	font-weight: normal;
+	font-style: normal;
+	margin: 5px 0px 0px 10px;
+	border: solid 1px #000;
+	z-index: 1000;
+	visibility: hidden;
+	position: absolute;
+	padding: 5px;
+	max-width: 300px;
+}
+.phpevtcal-table-calendar .phpevtcal-tooltip span{
+	color: #fbd774;
+	font-weight: bold;
+}
+#phpevtcal_event_detail{
+	margin-top: 16px;
+}
+.phpevtcal-event-box{
+	overflow: hidden;
+	background-color: #f6f6f6;
+	margin-bottom: 12px;
+	border-bottom: 1px solid #d6d5d5;
+}
+.phpevtcal-event-box .phpevtcal-detail-heading{
+	height: 33px;
+	overflow: hidden;
+	margin-bottom: 14px;
+}
+.phpevtcal-event-box .phpevtcal-detail-heading .phpevtcal-detail-date{
+	height: 34px;
+	color: #101010;
+	display: block;
+	float: left;
+	width: 150px;
+	padding-left: 14px;
+	padding-top: 16px;
+	font-size: 15px;
+}
+.phpevtcal-event-box .phpevtcal-detail-heading .phpevtcal-detail-close{
+	display: block;
+	float: right;
+	height: 24px;
+	width: 24px;
+	margin-top: 8px;
+	margin-right: 10px;
+	background: url(../img/frontend/layout_3/close.png) 0 0 no-repeat;
+}
+.phpevtcal-event-box .phpevtcal-event-title{
+	color: #3883cf;
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	margin: 6px 12px 4px 12px;
+}
+.phpevtcal-event-box .phpevtcal-event-title span{
+	color: #111820;
+}
+.phpevtcal-event-box .phpevtcal-detail-cate{
+	color: #5b5757;
+	font-size: 12px;
+	margin: 0px 12px 12px 12px;
+	text-transform: uppercase;
+}
+.phpevtcal-event-box .phpevtcal-detail-desc{
+	color: #767272;
+	margin: 2px 12px 12px 12px;
+	line-height: 20px;
+}
+
+#phpevtcal_pagination{
+	overflow: hidden;
+	float: right;
+	margin-bottom: 20px;
+}
+#phpevtcal_pagination a{
+	display: block;
+	float: right;
+	width: 26px;
+	height: 26px;
+	cursor: default;
+}
+#phpevtcal_pagination a.phpevtcal-paging{
+	cursor: pointer;
+}
+#phpevtcal_pagination .phpevtcal-paging-next{
+	background: url(../img/frontend/layout_3/page-next.png) 0 0 no-repeat;
+	margin-left: 14px;
+}
+#phpevtcal_pagination .phpevtcal-paging-prev{
+	background: url(../img/frontend/layout_3/page-prev.png) 0 0 no-repeat;
+}
