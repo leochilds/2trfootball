@@ -1,0 +1,453 @@
+@CHARSET "UTF-8";
+
+.ebcal-container{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #86909a;
+	font-size: 12px;
+	margin: 10px;
+	width: 645px;
+}
+.ebcal-container a{
+	text-decoration: none;
+}
+
+.ebcal-container .ebcal-field{
+	border: solid 1px #d6d7d9;
+	box-shadow: 1px 1px 1px #f6f6f6 inset;
+	padding: 5px 2px;
+	color: #333333;
+}
+
+/********************* buttons **********************/
+.ebcal-container .ebcal-button{
+	-moz-box-shadow:inset 0px -4px 0px 0px #2f979b;
+	-webkit-box-shadow:inset 0px -4px 0px 0px #2f979b;
+	box-shadow:inset 0px -4px 0px 0px #2f979b;
+	background-color:#68cfd1;
+	-webkit-border-top-left-radius:4px;
+	-moz-border-radius-topleft:4px;
+	border-top-left-radius:4px;
+	-webkit-border-top-right-radius:4px;
+	-moz-border-radius-topright:4px;
+	border-top-right-radius:4px;
+	-webkit-border-bottom-right-radius:4px;
+	-moz-border-radius-bottomright:4px;
+	border-bottom-right-radius:4px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-bottomleft:4px;
+	border-bottom-left-radius:4px;
+	text-indent:0;
+	display:inline-block;
+	color:#ffffff;
+	font-size:13px;
+	font-weight:normal;
+	font-style:normal;
+	height:36px;
+	line-height:36px;
+	padding: 0px 16px 0px 16px;
+	text-decoration:none;
+	text-align:center;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.ebcal-container .ebcal-button:HOVER{
+	background-color:#5bb8ba;
+	box-shadow:inset 0px -4px 0px 0px #277f81;
+}
+
+.ebcal-container .ebcal-grey-button{
+	-moz-box-shadow:inset 0px -4px 0px 0px #2f979b;
+	-webkit-box-shadow:inset 0px -4px 0px 0px #2f979b;
+	box-shadow:inset 0px -4px 0px 0px #858c94;
+	background-color:#b5bec5;
+	-webkit-border-top-left-radius:4px;
+	-moz-border-radius-topleft:4px;
+	border-top-left-radius:4px;
+	-webkit-border-top-right-radius:4px;
+	-moz-border-radius-topright:4px;
+	border-top-right-radius:4px;
+	-webkit-border-bottom-right-radius:4px;
+	-moz-border-radius-bottomright:4px;
+	border-bottom-right-radius:4px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-bottomleft:4px;
+	border-bottom-left-radius:4px;
+	text-indent:0;
+	display:inline-block;
+	color:#ffffff;
+	font-size:13px;
+	font-weight:normal;
+	font-style:normal;
+	height:36px;
+	line-height:36px;
+	padding: 0px 16px 0px 16px;
+	text-decoration:none;
+	text-align:center;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.ebcal-container .ebcal-grey-button:HOVER{
+	background-color:#a2a8ad;
+	box-shadow:inset 0px -4px 0px 0px #6e7276;
+}
+
+.ebcal-container .ebcal-button-disabled,
+.ebcal-container .ebcal-button-disabled:HOVER,
+.ebcal-container .ebcal-grey-button-disabled,
+.ebcal-container .ebcal-grey-button-disabled:HOVER{
+	background-color:#d4d6d9;
+	box-shadow:inset 0px -4px 0px 0px #adafb1;
+}
+
+.ebcal-container .ebcal-back{
+	background:url(../img/frontend/layout_2/back-icon.png) no-repeat;
+	padding-left: 14px;
+	margin-left: 14px;
+}
+
+.ebcal-container .ebcal-category{
+	margin-bottom: 14px;
+}
+.ebcal-container .ebcal-header{
+	background-color: #333132;
+	height: 70px;
+	overflow: hidden;
+}
+.ebcal-container .ebcal-header a{
+	color: #9fa8b1;
+}
+.ebcal-container .ebcal-header a.focus{
+	color: #ffffff;
+	font-weight: bold;
+}
+.ebcal-container .ebcal-header .ebcal-menu{
+	margin-top: 32px;
+}
+.ebcal-container .ebcal-header .ebcal-menu a{
+	line-height: 28px;
+	padding: 0px 18px;
+}
+
+.ebcal-container .ebcal-event-list{
+	overflow: hidden;
+	background-color: #f5f6f8;
+	padding:12px;
+	padding-bottom: 0px;
+}
+.ebcal-container .ebcal-event-list .ebcal-event-box{
+	overflow: hidden;
+	margin-bottom: 16px;
+	background-color: #ffffff;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	
+	-webkit-box-shadow: 0px 4px 6px 0px rgba(234,237,243,1);
+	-moz-box-shadow: 0px 4px 6px 0px rgba(234,237,243,1);
+	box-shadow: 0px 4px 6px 0px rgba(234,237,243,1);
+	
+	position: relative;
+}
+.ebcal-container .ebcal-event-list .ebcal-event-overlay{
+	background:url(../img/frontend/layout_2/opacity.png);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    color: #ffffff;
+    text-align: center;
+}
+.ebcal-container .ebcal-event-list .ebcal-event-overlay .ebcal-button{
+}
+.ebcal-container .ebcal-event-list .ebcal-event-overlay:HOVER{
+	cursor: pointer;
+}
+.ebcal-container .ebcal-event-list .ebcal-overlay-inner{
+	font-size: 13px;
+	line-height: 20px;
+	margin: 12px;
+}
+.ebcal-container .ebcal-event-list .ebcal-event-box .ebcal-img{
+	overflow: hidden;
+	float: left;
+	margin-right: 12px;
+}
+.ebcal-container .ebcal-event-list .ebcal-event-box img{
+	display: block;
+	width: 226px;
+	height: 148px;
+	border: 0px;
+}
+.ebcal-container .ebcal-event-list .ebcal-event-box .ebcal-detail{
+	overflow: hidden;
+	margin: 12px;
+}
+.ebcal-container .ebcal-event-list .ebcal-event-box .ebcal-detail .ebcal-category{
+	color: #e7a557;
+	font-size: 13px;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+.ebcal-container .ebcal-event-list .ebcal-event-box .ebcal-detail .ebcal-title{
+	color: #24b3d5;
+	font-size: 18px;
+	margin-bottom: 6px;
+}
+.ebcal-container .ebcal-event-list .ebcal-event-box .ebcal-detail label{
+	padding-left: 20px;
+	color: #84919a;
+	font-size: 12px;
+	line-height: 18px;
+	display: block;
+	margin-bottom: 5px;
+}
+.ebcal-container .ebcal-event-list .ebcal-event-box .ebcal-detail label.ebcal-date{
+	background: url(../img/frontend/layout_2/icon-time.png) 0 0 no-repeat;
+}
+.ebcal-container .ebcal-event-list .ebcal-event-box .ebcal-detail label.ebcal-location{
+	background: url(../img/frontend/layout_2/icon-location.png) 0 0 no-repeat;
+}
+.ebcal-container .ebcal-event-list .ebcal-event-box .ebcal-detail label.ebcal-ticket{
+	background: url(../img/frontend/layout_2/icon-ticket.png) 0 0 no-repeat;
+}
+.ebcal-container .ebcal-event-list .ebcal-event-notfound{
+	color: #24B3D5;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.ebcal-paging-container{
+	overflow:hidden;
+	background-color: #333132;
+	height: 35px;
+}
+
+/********************* paginator **********************/
+.ebcal-paginator{
+    list-style: none outside none;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+    margin-left: 12px;
+}
+.ebcal-paginator li{
+	display: inline;
+	overflow: hidden;
+}
+.ebcal-paginator li.dot span{
+	display: block;
+	float: left;
+	height: 33px;
+	line-height: 33px;
+	margin-right: 4px;
+}
+.ebcal-paginator li a{
+	display: block;
+	float: left;
+	overflow: hidden;
+	margin-right: 5px;
+	height: 33px;
+	color: #f5f6f8;
+	line-height: 33px;
+	padding: 0px 9px 0px 9px;
+}
+
+.ebcal-paginator li a.current{
+	background-color: #f5f6f8;
+	color: #323232;
+}
+
+.ebcal-container .ebcal-event-detail{
+	overflow: hidden;
+	background-color: #f5f6f8;
+	padding:12px;
+}
+.ebcal-container .ebcal-event-detail-inner{
+	overflow: hidden;
+	padding: 12px;
+	background-color: #ffffff;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	
+	-webkit-box-shadow: 0px 4px 6px 0px rgba(234,237,243,1);
+	-moz-box-shadow: 0px 4px 6px 0px rgba(234,237,243,1);
+	box-shadow: 0px 4px 6px 0px rgba(234,237,243,1);
+	
+}
+.ebcal-container .ebcal-event-detail .ebcal-title{
+	color: #333132;
+	font-size: 20px;
+	font-weight: bold;
+	
+	border-bottom: 1px solid #e5e8ed;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.ebcal-container .ebcal-event-detail .ebcal-detail{
+	color: #84919a;
+	
+	border-bottom: 1px solid #e5e8ed;
+	padding-bottom: 10px;
+	overflow: hidden;
+	margin-bottom: 12px;
+}
+
+.ebcal-container .ebcal-event-detail .ebcal-detail .ebcal-category{
+	color: #e7a557;
+	font-size: 13px;
+	text-transform: uppercase;
+	float: left;
+	width: 18%;
+	margin-right: 10px;
+}
+
+.ebcal-container .ebcal-event-detail .ebcal-detail label{
+	padding-left: 20px;
+	color: #84919a;
+	font-size: 12px;
+	line-height: 18px;
+	display: block;
+	margin-bottom: 5px;
+	float: left;
+}
+.ebcal-container .ebcal-event-detail .ebcal-detail label.ebcal-date{
+	background: url(../img/frontend/layout_2/icon-time.png) 0 0 no-repeat;
+	width: 23%;
+}
+.ebcal-container .ebcal-event-detail .ebcal-detail label.ebcal-location{
+	background: url(../img/frontend/layout_2/icon-location.png) 0 0 no-repeat;
+	width: 23%;
+}
+.ebcal-container .ebcal-event-detail .ebcal-detail label.ebcal-ticket{
+	background: url(../img/frontend/layout_2/icon-ticket.png) 0 0 no-repeat;
+}
+
+.ebcal-container .ebcal-event-content{
+	overflow: hidden;
+}
+.ebcal-container .ebcal-event-content .left-column{
+	float: left;
+	width: 56%;
+}
+.ebcal-container .ebcal-event-content .image{
+	float: right;
+	width: 40%;
+}
+.ebcal-container .ebcal-event-content .image img{
+	width: 100%;
+	display: block;
+}
+.ebcal-container .ebcal-event-content .desc{
+	color: #333333;
+	font-size: 13px;
+	line-height: 20px;
+	margin-bottom: 12px;
+}
+.ebcal-container .ebcal-event-content .ebcal-past-event,
+.ebcal-container .ebcal-event-content .ebcal-full-event{
+	display: block;
+	color: #84919A;
+    font-size: 14px;
+}
+.ebcal-container .ebcal-event-content .ebcal-buy-ticket-notes{
+	display: none;
+}
+/*********form*************/
+.ebcal-form{
+	
+}
+.ebcal-form{
+}
+.ebcal-form p{
+	clear: left;
+	margin: 0 0 10px 0;
+	overflow: hidden;
+	color: #333333;
+}
+.ebcal-form p label.title{
+	display: block;
+	font-weight: bold;
+	float: left;
+	width: 120px;
+	padding-top: 6px;
+	color: #323232;
+}
+.ebcal-form p label.content{
+	display: block;
+	color: #86909a;
+	margin-top: 5px;
+}
+.ebcal-form .ebcal-field{
+	border: solid 1px #d3d9db;
+	box-shadow: 2px 2px 1px #f0f0f0 inset;
+	padding: 5px 2px;
+}
+.ebcal-form p img {
+    margin: 0 17px 0 0;
+    vertical-align: middle;
+}
+.ebcal-form p textarea{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.ebcal-form .ebcal-error-container{
+	background: url("../img/frontend/f_warn_pattern.png") repeat scroll 0 0 transparent;
+    border: 1px solid #F8C8C8;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1px 1px 2px #F2F2F2;
+    color: #860707;
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 44px;
+    position: relative;
+}
+.ebcal-error-container span {
+    background: url("../img/frontend/f_warn.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 26px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 31px;
+}
+
+.ebcal-form-container{
+	overflow: hidden;
+	background-color: #f5f6f8;
+	padding:12px;
+}
+.ebcal-form-inner{
+	background-color: #ffffff;
+	padding: 12px;
+}
+.ebcal-form-container .ebcal-title{
+	color: #313131;
+	font-size: 16px;
+	font-weight: bold;
+	
+	border-bottom: 1px solid #e5e8ed;
+	padding-bottom: 12px;
+	margin-bottom: 12px;
+}
+.ebcal-form-container .ebcal-title label{
+	display: block;
+	margin-bottom: 8px;
+}
+.ebcal-form-container .ebcal-title span{
+	display: block;
+	font-size: 14px;
+	color: #86909c;
+	font-weight: normal;
+}
+.ebcal-form-container .ebcal-price-container{
+	
+	border-bottom: 1px solid #e5e8ed;
+	padding-bottom: 10px;
+	margin-bottom: 14px;
+}

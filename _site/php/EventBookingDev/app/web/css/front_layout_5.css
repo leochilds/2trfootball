@@ -1,0 +1,652 @@
+@CHARSET "UTF-8";
+
+#phpevtcal_container{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #9c9ea1;
+	font-size: 12px;
+	margin: 10px;
+	width: 600px;
+}
+#phpevtcal_header{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+#phpevtcal_category{
+	float: left;
+}
+#phpevtcal_menu{
+	overflow: hidden;
+	float: right;
+}
+#phpevtcal_menu a{
+	display: block;
+	width: 25px;
+	height: 25px;
+	float: right;
+	margin-left: 8px;
+}
+#phpevtcal_menu a.phpevtcal-monthly{
+	background: url(../img/frontend/layout_5/monthly.png) 0 0 no-repeat;
+}
+#phpevtcal_menu a.phpevtcal-calendar{
+	background: url(../img/frontend/layout_5/calendar.png) 0 0 no-repeat;
+}
+#phpevtcal_menu a.phpevtcal-list{
+	background: url(../img/frontend/layout_5/list.png) 0 0 no-repeat;
+}
+.phpevtcal-select{
+	background-color: #ffffff;
+    border: 1px solid #dbd0d0;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 14px;
+    padding: 7px 6px;
+    color: #aaa7a7;
+    -webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+
+}
+.phpevtcal-round-container{
+	overflow: hidden;
+}
+.phpevtcal-round-container-top{
+	overflow: hidden;
+}
+.phpevtcal-round-container-top .left{
+	width: 9px;
+	height: 9px;
+	background: url(../img/frontend/layout_5/round-top-left.png) 0 0 no-repeat;
+	float: left;
+}
+.phpevtcal-round-container-top .middle{
+	height: 9px;
+	background-color: #eeeeec;
+}
+.phpevtcal-round-container-top .right{
+	width: 9px;
+	height: 9px;
+	background: url(../img/frontend/layout_5/round-top-right.png) 0 0 no-repeat;
+	float: right;
+}
+#phpevtcal_content{
+	background-color: #eeeeec;
+	padding: 2px 10px 2px 10px;
+	overflow: hidden;
+}
+.phpevtcal-round-container-bottom{
+	overflow: hidden;
+}
+.phpevtcal-round-container-bottom .left{
+	width: 9px;
+	height: 9px;
+	background: url(../img/frontend/layout_5/round-bottom-left.png) 0 0 no-repeat;
+	float: left;
+}
+.phpevtcal-round-container-bottom .middle{
+	height: 9px;
+	background-color: #eeeeec;
+}
+.phpevtcal-round-container-bottom .right{
+	width: 9px;
+	height: 9px;
+	background: url(../img/frontend/layout_5/round-bottom-right.png) 0 0 no-repeat;
+	float: right;
+}
+
+.phpevtcal-header-container{
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	background-color: #ffffff;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #c4c4c4;
+}
+.phpevtcal-nav-bar{
+	height: 44px;
+	margin-bottom: 2px;
+}
+.phpevtcal-nav-bar a{
+	display: block;
+	width: 18px;
+	height: 18px;
+	margin-top: 10px;
+}
+.phpevtcal-nav-bar a.prev{
+	float: left;
+	background: url(../img/frontend/layout_5/prev.png) 0 0 no-repeat;
+	margin-left: 4px;
+}
+.phpevtcal-nav-bar a.next{
+	float: right;
+	background: url(../img/frontend/layout_5/next.png) 0 0 no-repeat;
+	margin-right: 4px;
+}
+.phpevtcal-nav-bar .month-name{
+	display: block;
+	float: left;
+	color: #a1a7ae;
+	font-size: 20px;
+	margin-left: 80px;
+	margin-top: 6px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.phpevtcal-month-bar{
+	overflow: hidden;
+	margin-bottom: 2px;
+}
+.phpevtcal-month-bar a{
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	width: 41px;
+	height: 25px;
+	text-align: center;
+	color: #a9adb1;
+	text-transform: uppercase;
+	display: block;
+	float: left;
+	margin-right: 2px;
+	background-color: #e8e8e8;
+	text-decoration: none;
+	font-weight: bold;
+}
+.phpevtcal-month-bar a span{
+	display: block;
+	margin-top: 4px;
+}
+.phpevtcal-month-bar a.current{
+	background-color: #797575;
+	color: #ffffff;
+	cursor: default;
+}
+.phpevtcal-event-table{
+	font-size: 12px;
+	color: #9c9ea1;
+	width: 100%;
+}
+
+.phpevtcal-event-table td{
+	padding:0px;
+	margin: 0px;
+}
+
+.phpevtcal-event-table tr.normal-top td.day-left{
+	width: 10px;
+	height: 9px;
+	background: url(../img/frontend/layout_5/row-bg-top-left.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.normal-top td.day-num{
+	height: 9px;
+	background: url(../img/frontend/layout_5/row-bg-top-middle-grey.png) 0 0 repeat-x;
+}
+.phpevtcal-event-table tr.normal-top td.day-separator{
+	height: 9px;
+	width: 10px;
+	background: url(../img/frontend/layout_5/row-bg-separator-top.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.normal-top td.day-week,
+.phpevtcal-event-table tr.normal-top td.day-content{
+	height: 9px;
+	background: url(../img/frontend/layout_5/row-bg-middle-top.png) 0 0 repeat-x;
+}
+.phpevtcal-event-table tr.normal-top td.day-right{
+	width: 10px;
+	height: 9px;
+	background: url(../img/frontend/layout_5/row-bg-top-right.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.normal-middle td.day-left{
+	width: 10px;
+	background: url(../img/frontend/layout_5/row-bg-middle-left.png) 0 0 repeat-y;
+}
+.phpevtcal-event-table tr.normal-middle td.day-num{
+	background-color: #eeeeec;
+}
+.phpevtcal-event-table tr.normal-middle td.day-separator{
+	width: 10px;
+	background: url(../img/frontend/layout_5/row-bg-separator-middle.png) 0 0 repeat-y;
+}
+.phpevtcal-event-table tr.normal-middle td.day-week,
+.phpevtcal-event-table tr.normal-middle td.day-content{
+	background-color: #ffffff;
+}
+.phpevtcal-event-table tr.normal-middle td.day-right{
+	width: 9px;
+	background: url(../img/frontend/layout_5/row-bg-middle-right.png) 0 0 repeat-y;
+}
+.phpevtcal-event-table tr.normal-bottom td.day-left{
+	width: 10px;
+	height: 8px;
+	background: url(../img/frontend/layout_5/row-bg-bottom-left.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.normal-bottom td.day-num{
+	height: 8px;
+	background: url(../img/frontend/layout_5/row-bg-bottom-middle-grey.png) 0 0 repeat-x;
+}
+.phpevtcal-event-table tr.normal-bottom td.day-separator{
+	height: 8px;
+	width: 10px;
+	background: url(../img/frontend/layout_5/row-bg-separator-bottom.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.normal-bottom td.day-week,
+.phpevtcal-event-table tr.normal-bottom td.day-content{
+	height: 8px;
+	background: url(../img/frontend/layout_5/row-bg-bottom-middle-white.png) 0 0 repeat-x;
+}
+.phpevtcal-event-table tr.normal-bottom td.day-right{
+	width: 10px;
+	height: 8px;
+	background: url(../img/frontend/layout_5/row-bg-bottom-right.png) 0 0 no-repeat;
+}
+/****has-event***/
+.phpevtcal-event-table tr.has-event-top td.day-left{
+	width: 10px;
+	height: 9px;
+	background: url(../img/frontend/layout_5/event-bg-top-left.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.has-event-top td.day-num{
+	height: 9px;
+	background: url(../img/frontend/layout_5/event-bg-top-middle-blue.png) 0 0 repeat-x;
+}
+.phpevtcal-event-table tr.has-event-top td.day-separator{
+	height: 9px;
+	width: 10px;
+	background: url(../img/frontend/layout_5/event-bg-separator-top.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.has-event-top td.day-week,
+.phpevtcal-event-table tr.has-event-top td.day-content{
+	height: 9px;
+	background: url(../img/frontend/layout_5/row-bg-top-middle-grey.png) 0 0 repeat-x;
+}
+.phpevtcal-event-table tr.has-event-top td.day-right{
+	width: 10px;
+	height: 9px;
+	background: url(../img/frontend/layout_5/event-bg-top-right.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.has-event-middle td.day-left{
+	width: 10px;
+	background: url(../img/frontend/layout_5/event-bg-middle-left.png) 0 0 repeat-y;
+}
+.phpevtcal-event-table tr.has-event-middle td.day-num{
+	background-color: #3d75b9;
+	color: #ffffff;
+}
+.phpevtcal-event-table tr.has-event-middle td.day-separator{
+	width: 10px;
+	background: url(../img/frontend/layout_5/event-bg-separator-middle.png) 0 0 repeat-y;
+}
+.phpevtcal-event-table tr.has-event-middle td.day-week,
+.phpevtcal-event-table tr.has-event-middle td.day-content{
+	background-color: #eeeeec;
+}
+.phpevtcal-event-table tr.has-event-middle td.day-right{
+	width: 9px;
+	background: url(../img/frontend/layout_5/event-bg-middle-right.png) 0 0 repeat-y;
+}
+.phpevtcal-event-table tr.has-event-bottom td.day-left{
+	width: 10px;
+	height: 8px;
+	background: url(../img/frontend/layout_5/event-bg-bottom-left.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.has-event-bottom td.day-num{
+	height: 8px;
+	background: url(../img/frontend/layout_5/event-bg-bottom-middle-blue.png) 0 0 repeat-x;
+}
+.phpevtcal-event-table tr.has-event-bottom td.day-separator{
+	height: 8px;
+	width: 10px;
+	background: url(../img/frontend/layout_5/event-bg-separator-bottom.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.has-event-bottom td.day-week,
+.phpevtcal-event-table tr.has-event-bottom td.day-content{
+	height: 8px;
+	background: url(../img/frontend/layout_5/row-bg-bottom-middle-grey.png) 0 0 repeat-x;
+}
+.phpevtcal-event-table tr.has-event-bottom td.day-right{
+	width: 10px;
+	height: 8px;
+	background: url(../img/frontend/layout_5/event-bg-bottom-right.png) 0 0 no-repeat;
+}
+/**current***/
+.phpevtcal-event-table tr.current-top td.day-left{
+	width: 10px;
+	height: 9px;
+	background: url(../img/frontend/layout_5/current-bg-top-left.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.current-top td.day-num{
+	height: 9px;
+	background: url(../img/frontend/layout_5/current-bg-top-middle-red.png) 0 0 repeat-x;
+}
+.phpevtcal-event-table tr.current-top td.day-separator{
+	height: 9px;
+	width: 10px;
+	background: url(../img/frontend/layout_5/current-bg-separator-top.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.current-top td.day-week,
+.phpevtcal-event-table tr.current-top td.day-content{
+	height: 9px;
+	background: url(../img/frontend/layout_5/row-bg-middle-top.png) 0 0 repeat-x;
+}
+.phpevtcal-event-table tr.current-top td.day-right{
+	width: 10px;
+	height: 9px;
+	background: url(../img/frontend/layout_5/row-bg-top-right.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.current-middle td.day-left{
+	width: 10px;
+	background: url(../img/frontend/layout_5/current-bg-middle-left.png) 0 0 repeat-y;
+}
+.phpevtcal-event-table tr.current-middle td.day-num{
+	background-color: #b22828;
+	color: #ffffff;
+}
+.phpevtcal-event-table tr.current-middle td.day-separator{
+	width: 10px;
+	background: url(../img/frontend/layout_5/current-bg-separator-middle.png) 0 0 repeat-y;
+}
+.phpevtcal-event-table tr.current-middle td.day-week,
+.phpevtcal-event-table tr.current-middle td.day-content{
+	background-color: #ffffff;
+}
+.phpevtcal-event-table tr.current-middle td.day-right{
+	width: 9px;
+	background: url(../img/frontend/layout_5/row-bg-middle-right.png) 0 0 repeat-y;
+}
+.phpevtcal-event-table tr.current-bottom td.day-left{
+	width: 10px;
+	height: 8px;
+	background: url(../img/frontend/layout_5/current-bg-bottom-left.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.current-bottom td.day-num{
+	height: 8px;
+	background: url(../img/frontend/layout_5/current-bg-bottom-middle-red.png) 0 0 repeat-x;
+}
+.phpevtcal-event-table tr.current-bottom td.day-separator{
+	height: 8px;
+	width: 10px;
+	background: url(../img/frontend/layout_5/current-bg-separator-bottom.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.current-bottom td.day-week,
+.phpevtcal-event-table tr.current-bottom td.day-content{
+	height: 8px;
+	background: url(../img/frontend/layout_5/row-bg-bottom-middle-white.png) 0 0 repeat-x;
+}
+.phpevtcal-event-table tr.current-bottom td.day-right{
+	width: 10px;
+	height: 8px;
+	background: url(../img/frontend/layout_5/row-bg-bottom-right.png) 0 0 no-repeat;
+}
+.phpevtcal-event-table tr.normal-middle td{
+	height: 18px;
+}
+.phpevtcal-event-table tr.current-middle td{
+	height: 18px;
+}
+.phpevtcal-event-table tr.has-event-middle td{
+	height: 18px;
+}
+.phpevtcal-event-table td.day-num{
+	width: 25px;
+	text-align: center;
+	font-size: 13px;
+}
+.phpevtcal-event-table td.day-week{
+	width: 90px;
+	padding-left: 8px;
+	font-size: 13px;
+	color: #a9adb1;
+}
+.phpevtcal-line{
+	border-bottom: 1px solid #ffffff;
+	padding-bottom: 5px;
+}
+.phpevtcal-monthly-eventbox{
+	margin-bottom: 5px;
+	margin-top: 5px;
+	line-height: 20px;
+}
+.phpevtcal-monthly-eventbox label{
+	font-size: 13px;
+	font-weight: bold;
+	color: #000000;
+}
+.phpevtcal-monthly-eventbox label span{
+	color: #3d75b9;
+	font-weight: normal;
+}
+/********Calendar view************/
+.phpevtcal-table-calendar{
+	width: 100%;
+	font-size: 12px;
+	color: #9c9ea1;
+	border-collapse: collapse;
+	border: none;
+	display: block;
+}
+.phpevtcal-table-calendar td{
+	padding: 0px;
+	margin: 0px;
+}
+.phpevtcal-table-calendar td.round-left, .phpevtcal-table-calendar td.round-right{
+	width: 8px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav{
+	
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td{
+	height: 47px;
+	background: url(../img/frontend/layout_5/calendar/nav-middle.png) 0 0 repeat-x;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td.round-left{
+	height: 47px;
+	background: url(../img/frontend/layout_5/calendar/nav-left.png) 0 0 no-repeat;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td.round-right{
+	height: 47px;
+	background: url(../img/frontend/layout_5/calendar/nav-right.png) 0 0 no-repeat;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-space td{
+	height: 2px;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td.current-month{
+	color: #a1a7ae;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td a{
+	display: block;
+	height: 18px;
+	width: 18px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td a.prev{
+	float: left;
+	background: url(../img/frontend/layout_5/prev.png) 0 0 no-repeat;
+	margin-left: 4px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td a.next{
+	float: right;
+	background: url(../img/frontend/layout_5/next.png) 0 0 no-repeat;
+	margin-right: 4px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-weekday td{
+	color: #292b2e;
+	text-align: center;	
+	font-weight: bold;
+	height: 30px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-top-round td{
+	background-color: #ffffff;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-top-round td.round-left{
+	height: 9px;
+	background: url(../img/frontend/layout_5/calendar/cal-top-left.png) 0 0 no-repeat;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-top-round td.round-right{
+	height: 9px;
+	background: url(../img/frontend/layout_5/calendar/cal-top-right.png) 0 0 no-repeat;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-bottom-round td{
+	background-color: #ffffff;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-bottom-round td.round-left{
+	height: 9px;
+	background: url(../img/frontend/layout_5/calendar/cal-bottom-left.png) 0 0 no-repeat;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-bottom-round td.round-right{
+	height: 9px;
+	background: url(../img/frontend/layout_5/calendar/cal-bottom-right.png) 0 0 no-repeat;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-space td{
+	height: 10px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td{
+	height: 55px;
+	text-align: center;
+	font-size: 16px;
+	width: 80px;
+	background-color: #ffffff;
+	background:  #ffffff url(../img/frontend/layout_5/calendar/day-bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #a9adb1;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td.round-left, .phpevtcal-table-calendar tr.phpevtcal-tr-day td.round-right{
+	background-color: #ffffff;
+	background-image:none;
+	width: 8px !important;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td.last-month-day,
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td.next-month-day{
+	color: #e5e5e6;
+	background:  #ffffff url(../img/frontend/layout_5/calendar/disable-bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td.current-date{
+	background: #ffffff url(../img/frontend/layout_5/calendar/current-bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #ffffff;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td.has-event{
+	background:  #ffffff url(../img/frontend/layout_5/calendar/event-bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.phpevtcal-table-calendar .phpevtcal-tooltip{
+	margin: 5px 0px 0px 10px;
+	z-index: 0;
+	visibility: hidden;
+	position: absolute;
+	overflow: hidden;
+}
+.phpevtcal-table-calendar .phpevtcal-tooltip{
+	background-color: #19467d;
+	color: #c3c5c8;
+	font-size:12px;
+	text-align: left;
+	
+	font-weight: normal;
+	font-style: normal;
+	margin: 5px 0px 0px 10px;
+	border: solid 1px #19467d;
+	z-index: 1000;
+	visibility: hidden;
+	position: absolute;
+	padding: 5px;
+	max-width: 300px;
+}
+#phpevtcal_event_detail{
+	margin-top: 16px;
+}
+.phpevtcal-event-box{
+	overflow: hidden;
+	margin-bottom: 12px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	background-color: #ffffff;
+}
+.phpevtcal-event-box .phpevtcal-detail-heading{
+	height: 26px;
+	overflow: hidden;
+	margin-bottom: 6px;
+	margin-top: 8px;
+}
+.phpevtcal-event-box .phpevtcal-detail-heading .phpevtcal-detail-date{
+	height: 26px;
+	color: #a1a7ae;
+	display: block;
+	float: left;
+	width: 150px;
+	padding-left: 14px;
+	padding-top: 6px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.phpevtcal-event-box .phpevtcal-detail-heading .phpevtcal-detail-close{
+	display: block;
+	float: right;
+	height: 20px;
+	width: 20px;
+	background: url(../img/frontend/layout_5/close.png) 0 0 no-repeat;
+	margin-right: 10px;
+}
+.phpevtcal-event-box .phpevtcal-event-title{
+	color: #000000;
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	margin: 6px 12px 4px 12px;
+	font-weight: bold;
+}
+.phpevtcal-event-box .phpevtcal-detail-cate{
+	color: #3d75b9;
+	font-size: 13px;
+	margin: 0px 12px 12px 12px;
+}
+.phpevtcal-event-box .phpevtcal-detail-desc{
+	color: #c3c5c8;
+	margin: 2px 12px 12px 12px;
+	line-height: 20px;
+}
+
+#phpevtcal_pagination{
+	overflow: hidden;
+	float: right;
+	margin-bottom: 20px;
+}
+#phpevtcal_pagination a{
+	display: block;
+	float: right;
+	width: 18px;
+	height: 18px;
+	cursor: default;
+}
+#phpevtcal_pagination a.phpevtcal-paging{
+	cursor: pointer;
+}
+#phpevtcal_pagination .phpevtcal-paging-next{
+	background: url(../img/frontend/layout_5/next.png) 0 0 no-repeat;
+	margin-left: 14px;
+}
+#phpevtcal_pagination .phpevtcal-paging-prev{
+	background: url(../img/frontend/layout_5/prev.png) 0 0 no-repeat;
+}

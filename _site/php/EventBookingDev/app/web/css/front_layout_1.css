@@ -1,0 +1,626 @@
+@CHARSET "UTF-8";
+
+.phpevtcal-container{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #9c9ea1;
+	margin: 10px;
+	width: 100%;
+}
+.phpevtcal-header{
+	overflow: hidden;
+}
+.phpevtcal-menu{
+	overflow: hidden;
+	float: right;
+}
+.phpevtcal-menu a{
+	display: block;
+	width: 22px;
+	height: 22px;	
+	float: right;
+	margin-left: 8px;
+}
+.phpevtcal-menu a.phpevtcal-monthly{
+	background: url(../img/frontend/layout_1/monthly.png) 0 0 no-repeat;
+}
+.phpevtcal-menu a.phpevtcal-calendar{
+	background: url(../img/frontend/layout_1/calendar.png) 0 0 no-repeat;
+}
+.phpevtcal-menu a.phpevtcal-list{
+	background: url(../img/frontend/layout_1/list.png) 0 0 no-repeat;
+}
+.phpevtcal-select{
+	background-color: #f5f6f6;
+    border: 1px solid #e1e0e0;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 14px;
+    padding: 7px 6px;
+}
+
+.phpevtcal-nav-bar{
+	height: 44px;
+	background: url(../img/frontend/layout_1/monthname-bg.png) 0 0 repeat-x;
+	margin-bottom: 2px;
+}
+.phpevtcal-nav-bar a{
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin-top: 10px;
+}
+.phpevtcal-nav-bar a.prev{
+	float: left;
+	background: url(../img/frontend/layout_1/prev.png) 0 0 no-repeat;
+	margin-left: 4px;
+}
+.phpevtcal-nav-bar a.next{
+	float: right;
+	background: url(../img/frontend/layout_1/next.png) 0 0 no-repeat;
+	margin-right: 4px;
+}
+.phpevtcal-nav-bar .month-name{
+	display: block;
+	float: left;
+	color: #ffffff;
+	font-size: 20px;
+	margin-left: 80px;
+	margin-top: 8px;
+	font-weight: bold;
+}
+.phpevtcal-month-bar{
+	overflow: hidden;
+	margin-bottom: 2px;
+}
+.phpevtcal-month-bar a{
+	width: 42px;
+	height: 25px;
+	text-align: center;
+	color: #ffffff;
+	text-transform: uppercase;
+	display: block;
+	float: left;
+	margin-right: 2px;
+	border: 1px solid #51555a;
+	background-color: #6c7078;
+	text-decoration: none;
+	font-weight: bold;
+}
+.phpevtcal-month-bar a span{
+	display: block;
+	margin-top: 4px;
+}
+.phpevtcal-month-bar a.current{
+	border: 1px solid #F07057;
+	background-color: #F07057;
+	cursor: default;
+}
+.phpevtcal-event-table{
+	font-size: 12px;
+	color: #9c9ea1;
+	border-width: 0 0 1px 1px;
+	border-spacing: 0;
+	border-collapse: collapse;
+	border-style: solid;
+	border-color: #d8dadc;
+	width: 100%;
+}
+.phpevtcal-event-table td{
+	padding: 5px;
+	margin: 0;
+	border-width: 1px 1px 0 0;
+	border-style: solid;
+	border-color: #d8dadc;
+}
+.phpevtcal-event-table td.day-num{
+	width: 20px;
+	text-align: right;
+}
+.phpevtcal-event-table td.day-week{
+	width: 80px;
+}
+.phpevtcal-event-table td.start-time{
+	width: 60px;
+}
+.phpevtcal-event-table tr.current-date td.day-num,
+.phpevtcal-event-table tr.current-date td.day-week{
+	background-color: #005989;
+	color: #ffffff;
+}
+.phpevtcal-event-table tr.has-event td.day-num,
+.phpevtcal-event-table tr.has-event td.day-week,
+.phpevtcal-event-table tr.has-event td.start-time{
+	background-color: #F07057;
+	color: #000000;
+}
+
+.phpevtcal-event-table tr.has-event td.day-num,
+.phpevtcal-event-table tr.has-event td.day-week{
+	color: #ffffff;
+}
+.phpevtcal-event-table tr.ebcal-fulled-event td.day-num,
+.phpevtcal-event-table tr.ebcal-fulled-event td.day-week,
+.phpevtcal-event-table tr.ebcal-fulled-event td.start-time{
+	background-color: #44bbcc;
+}
+.phpevtcal-event-table tr.has-event td label{
+	display: block;
+	color: #0D0E10;
+	font-size: 13px;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+.phpevtcal-event-table tr.has-event td label.ebcal-available-tickets,
+.phpevtcal-event-table tr.has-event td label.ebcal-location{
+	display: block;
+	font-size: 13px;
+	margin-bottom: 6px;
+	font-weight: normal;
+	color: #9C9EA1;
+}
+.phpevtcal-event-table tr.has-event td .ebcal-monthly-desc{
+	overflow: hidden;
+	margin-bottom: 5px;
+	word-wrap:break-word;
+}
+.phpevtcal-event-table tr.has-event img.ebcal-event-image{
+	display: block;
+	float: left;
+	margin-right: 6px;
+	width: 90px;
+	border: none;
+}
+/********Calendar view************/
+.phpevtcal-table-calendar{
+	width: 100%;
+	font-size: 12px;
+	color: #9c9ea1;
+	border-collapse: collapse;
+}
+.phpevtcal-table-calendar td{
+	padding: 5px;
+	margin: 0;
+	border: 1px solid #d8dadc;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav{
+	
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td{
+	height: 34px;
+	background: url(../img/frontend/layout_1/monthname-bg.png) 0 0 repeat-x;
+	border: none;
+	color: #ffffff;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-space td{
+	height: 2px;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td.current-month{
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td a{
+	display: block;
+	height: 22px;
+	width: 22px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td a.prev{
+	float: left;
+	background: url(../img/frontend/layout_1/prev.png) 0 0 no-repeat;
+	margin-left: 4px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-nav td a.next{
+	float: right;
+	background: url(../img/frontend/layout_1/next.png) 0 0 no-repeat;
+	margin-right: 4px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-weekday td{
+	height: 35px;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-align: center;
+	width: 50px;
+	border-color: #505459;
+	background-color: #6c7078;
+	font-weight: bold;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td{
+	height: 60px;
+	width: 94px;
+	text-align: center;
+	color: #a3a4a7;
+	font-size: 14px;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td.last-month-day,
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td.next-month-day{
+	background-color: #e3e0e0;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td.current-date{
+	border: 1px solid #ED5434;
+	background-color: #ED5434;
+	color: #ffffff;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td.has-event{
+	border: 1px solid #ED5434;
+	background-color: #F07057;
+	color: #ffffff;
+	cursor: pointer;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td.ebcal-fulled-event{
+	border: 1px solid #44bbcc;
+	background-color: #44bbcc;
+	color: #ffffff;
+}
+.phpevtcal-table-calendar tr.phpevtcal-tr-day td.has-event .phpevtcal-event-title{
+	font-size: 11px;
+	text-align: left;
+}
+.phpevtcal-table-calendar .phpevtcal-tooltip{
+	background-color: #15283b;
+	color: #ffffff;
+	font-size:12px;
+	text-align: left;
+	font-weight: normal;
+	font-style: normal;
+	margin: 5px 0px 0px 10px;
+	border: solid 1px #000;
+	z-index: 1000;
+	visibility: hidden;
+	position: absolute;
+	padding: 5px;
+}
+.phpevtcal-event-detail{
+	margin-top: 16px;
+}
+.phpevtcal-event-box{
+	border: 1px solid #d8d8d8;
+	overflow: hidden;
+	background-color: #ffffff;
+	margin-bottom: 12px;
+}
+.phpevtcal-event-box .phpevtcal-detail-heading{
+	height: 33px;
+	overflow: hidden;
+	margin-bottom: 14px;
+}
+.phpevtcal-event-box .phpevtcal-detail-heading .phpevtcal-detail-date{
+	height: 33px;
+	color: #ffffff;
+	background-color: #F07057;
+	display: block;
+	float: left;
+	padding: 9px 12px 0px 12px;
+	font-size: 14px;
+}
+.phpevtcal-event-box .phpevtcal-detail-heading .ebcal-fulled-event{
+	background-color: #44bbcc;
+}
+.phpevtcal-event-box .phpevtcal-detail-heading .phpevtcal-detail-close{
+	display: block;
+	float: right;
+	height: 33px;
+	width: 33px;
+	background: url(../img/frontend/layout_1/close.png) 0 0 no-repeat;
+}
+.phpevtcal-event-box .phpevtcal-event-title{
+	color: #0d0e10;
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	margin: 6px 12px 4px 12px;
+}
+.phpevtcal-event-box .phpevtcal-detail-cate,
+.phpevtcal-event-box .phpevtcal-detail-location{
+	color: #494b4e;
+	font-size: 13px;
+	margin: 0px 12px 4px 12px;
+}
+.phpevtcal-event-box label.ebcal-available-tickets{
+	display: block;
+	margin: 0px 12px 10px 12px;
+	font-size: 12px;
+	margin-bottom: 4px;
+	font-weight: normal;
+	color: #9C9EA1;
+}
+.phpevtcal-event-box .phpevtcal-detail-location{
+	color: #9C9EA1;
+}
+.phpevtcal-event-box .phpevtcal-detail-desc{
+	color: #a9abae;
+	margin: 2px 12px 12px 12px;
+	line-height: 20px;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+.phpevtcal-event-box .phpevtcal-detail-desc .ebcal-event-image{
+	display:block;
+	float: left;
+	width: 90px;
+	margin-right: 5px;
+	border: none;
+}
+.phpevtcal-event-box .ebcal-button{
+	margin-left: 12px;
+	margin-bottom: 8px;
+}
+.phpevtcal-event-listbox{
+	
+}
+.phpevtcal-event-listbox .phpevtcal-event-title{
+	color: #0d0d0d;
+	font-size: 19px;
+	margin-top: 10px;
+}
+.phpevtcal-event-listbox .phpevtcal-location{
+	display: block;
+	margin-left: 12px;
+	margin-bottom: 12px;
+}
+.phpevtcal-event-listbox .phpevtcal-detail-cate{
+	color: #1ca1e2;
+	font-size: 13px;
+	font-weight: bold;
+}
+.phpevtcal-event-listbox .phpevtcal-detail-date{
+	display: block;
+	margin: 0 12px 4px;
+}
+.phpevtcal-event-listbox .phpevtcal-button-pane{
+	background-color: #f5f6f8;
+	margin: 12px;
+	overflow: hidden;
+}
+.phpevtcal-event-listbox .phpevtcal-button-pane .ebcal-available-tickets{
+	display: block;
+	float: left;
+	color: #414141;
+	margin: 0px 0px 0px 12px;
+	line-height: 40px;
+}
+.phpevtcal-event-listbox .phpevtcal-button-pane .ebcal-available-tickets span{
+	font-size: 13px;
+	font-weight: bold;
+}
+.phpevtcal-event-listbox .phpevtcal-button-pane .ebcal-full-event{
+	display: block;
+	float: right;
+	margin: 0px 12px 0px 0px;
+	padding: 0px;
+	line-height: 40px;
+}
+.phpevtcal-event-listbox .phpevtcal-button-pane .ebcal-button {
+    margin: 4px 4px 4px 0px;
+    float: right;
+}
+.phpevtcal-pagination{
+	overflow: hidden;
+	float: right;
+	margin-bottom: 20px;
+}
+.phpevtcal-pagination a{
+	display: block;
+	float: right;
+	width: 14px;
+	height: 16px;
+	cursor: default;
+}
+.phpevtcal-pagination a.phpevtcal-paging{
+	cursor: pointer;
+}
+.phpevtcal-pagination .phpevtcal-paging-next{
+	background: url(../img/frontend/layout_1/page-next.png) 0 0 no-repeat;
+	margin-left: 14px;
+}
+.phpevtcal-pagination .phpevtcal-paging-prev{
+	background: url(../img/frontend/layout_1/page-prev.png) 0 0 no-repeat;
+}
+/****genearl****/
+.ebcal-past-event, .ebcal-full-event{
+	display: block;
+	font-weight: bold;
+	padding: 0px 0px 10px 10px;
+	color: #0D0E10;
+}
+.phpevtcal-event-table td .ebcal-past-event, .phpevtcal-event-table td .ebcal-full-event{
+	padding: 10px 0px 5px 0px;
+}
+.phpevtcal-button-pane .ebcal-past-event, .phpevtcal-button-pane .ebcal-full-event{
+	float: right;
+	line-height: 40px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+}
+/****form****/
+.ebcal-form{
+}
+.ebcal-form p{
+	clear: left;
+	margin: 0 0 10px 0;
+	overflow: hidden;
+}
+.ebcal-form p label.title{
+	display: block;
+	font-weight: bold;
+	float: left;
+	width: 120px;
+	padding-top: 6px;
+}
+.ebcal-form p label.content{
+	display: block;
+	color: #414243;
+	margin-top: 5px;
+	font-weight: bold;
+}
+.ebcal-form .ebcal-field{
+	border: solid 1px #d3d9db;
+	box-shadow: 2px 2px 1px #f0f0f0 inset;
+	padding: 5px 2px;
+}
+.ebcal-form p img {
+    margin: 0 17px 0 0;
+    vertical-align: middle;
+}
+.ebcal-form p textarea{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.ebcal-form .ebcal-error-container{
+	background: url("../img/frontend/f_warn_pattern.png") repeat scroll 0 0 transparent;
+    border: 1px solid #F8C8C8;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1px 1px 2px #F2F2F2;
+    color: #860707;
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 44px;
+    position: relative;
+}
+.ebcal-error-container span {
+    background: url("../img/frontend/f_warn.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 26px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 31px;
+}
+/****button****/
+.ebcal-button {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    
+    background: #1d66b1; /* Old browsers */
+	background: -moz-linear-gradient(top, #1d66b1 0%, #2989d8 100%, #074a8e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1d66b1), color-stop(100%,#2989d8), color-stop(100%,#074a8e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #1d66b1 0%,#2989d8 100%,#074a8e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #1d66b1 0%,#2989d8 100%,#074a8e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #1d66b1 0%,#2989d8 100%,#074a8e 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #1d66b1 0%,#2989d8 100%,#074a8e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d66b1', endColorstr='#074a8e',GradientType=0 ); /* IE6-9 */
+    
+    border-color: #3778ba #012c56 #3778ba #3778ba;
+   	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+    border-style: solid;
+    border-width: 1px;
+    -webkit-box-shadow: 0px 1px 3px #3778ba inset;
+	-moz-box-shadow:    0px 1px 3px #3778ba  inset;
+	box-shadow:         0px 1px 3px #3778ba  inset;
+	
+    color: #FFFFFF;
+    font: 12px/1 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    padding: 5px 0 7px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #3772ad;
+    width: 110px;
+}
+.ebcal-button:HOVER{
+	background: #043566;
+	 
+    background: -moz-linear-gradient(top, #063d75 0%, #2989d8 100%, #012c56 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#063d75), color-stop(100%,#2989d8), color-stop(100%,#012c56)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #063d75 0%,#2989d8 100%,#012c56 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #063d75 0%,#2989d8 100%,#012c56 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #063d75 0%,#2989d8 100%,#012c56 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #063d75 0%,#2989d8 100%,#012c56 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#063d75', endColorstr='#012c56',GradientType=0 ); /* IE6-9 */
+	
+    box-shadow: 0 1px 0 0 #215285 inset;
+    cursor: pointer;
+}
+.ebcal-button-disabled, .ebcal-button-disabled:HOVER{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e2e7eb), color-stop(1, #bdc2c7) );
+	background:-moz-linear-gradient( center top, #e2e7eb 5%, #bdc2c7 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e2e7eb', endColorstr='#bdc2c7');
+	background-color:#e2e7eb;
+	-webkit-border-top-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	border-top-left-radius:3px;
+	-webkit-border-top-right-radius:3px;
+	-moz-border-radius-topright:3px;
+	border-top-right-radius:3px;
+	-webkit-border-bottom-right-radius:3px;
+	-moz-border-radius-bottomright:3px;
+	border-bottom-right-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-bottom-left-radius:3px;
+	text-indent:0;
+	border:1px solid #a1a4a8;
+	display:inline-block;
+	text-decoration:none;
+	text-align:center;
+	box-shadow: none;
+	text-shadow: none;
+}
+.phpevtcal-event-table td .ebcal-button{
+	margin: 10px 0px 5px 0px;
+}
+/****booking form****/
+.ebcal-booking-form{
+	border: 1px solid #D8DADC;
+	overflow: hidden;
+}
+.ebcal-booking-form .ebcal-form-header{
+	overflow: hidden;
+}
+.ebcal-booking-form .ebcal-form-header .event-datetime{
+	background-color: #F07057;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 14px;
+    padding: 9px 12px 8px 12px;
+    width: 90%;
+    font-weight: bold;
+}
+.ebcal-booking-form .ebcal-form-header a.ebcal-close-form{
+	background: url("app/web/img/frontend/layout_1/close.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: right;
+    height: 33px;
+    width: 33px;
+}
+.ebcal-booking-form .ebcal-event-detail{
+	background-color: #fafafa;
+	padding: 16px 10px 16px 10px; 
+	border-bottom: 1px solid #D8DADC;
+}
+.ebcal-booking-form .ebcal-event-detail label{
+	display: block;
+	color: #0c0c0c;
+	font-weight: bold;
+	font-size: 15px;
+}
+.ebcal-booking-form .ebcal-event-detail span{
+	color: #93989c;
+	display: block;
+}
+.ebcal-booking-form label.event-title{
+	
+}
+
+.ebcal-form-container{
+	padding: 0px;
+}
+.ebcal-booking-form .ebcal-form-inner-container{
+	padding: 10px;
+}
+.ebc-term-content{
+	max-height: 150px;
+	overflow: scroll;
+}

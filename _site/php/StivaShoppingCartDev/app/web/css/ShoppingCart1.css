@@ -1,0 +1,1965 @@
+@CHARSET "UTF-8";
+/* General */
+.scContainer{
+	background-color: #fff;
+	color: #b8babc;
+	font: normal 14px/16px ArchivoNarrowRegular, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	margin: 0;
+	overflow: visible; /* Change from 'hidden', due bug who hide part of the menu */
+	padding: 0;
+	width: 1024px;
+}
+/* Reset */
+.scContainer div, .scContainer span, .scContainer applet, .scContainer object, .scContainer iframe,
+.scContainer h1, .scContainer h2, .scContainer h3, .scContainer h4, .scContainer h5, .scContainer h6, .scContainer p, .scContainer blockquote, .scContainer pre,
+.scContainer a, .scContainer abbr, .scContainer acronym, .scContainer address, .scContainer big, .scContainer cite, .scContainer code,
+.scContainer del, .scContainer dfn, .scContainer em, .scContainer img, .scContainer ins, .scContainer kbd, .scContainer q, .scContainer s, .scContainer samp,
+.scContainer small, .scContainer strike, .scContainer strong, .scContainer sub, .scContainer sup, .scContainer tt, .scContainer var,
+.scContainer b, .scContainer u, .scContainer i, .scContainer center,
+.scContainer dl, .scContainer dt, .scContainer dd, .scContainer ol, .scContainer ul, .scContainer li,
+.scContainer fieldset, .scContainer form, .scContainer label, .scContainer legend,
+.scContainer table, .scContainer caption, .scContainer tbody, .scContainer tfoot, .scContainer thead, .scContainer tr, .scContainer th, .scContainer td,
+.scContainer article, .scContainer aside, .scContainer canvas, .scContainer details, .scContainer embed, 
+.scContainer figure, .scContainer figcaption, .scContainer footer, .scContainer header, .scContainer hgroup, 
+.scContainer menu, .scContainer nav, .scContainer output, .scContainer ruby, .scContainer section, .scContainer summary,
+.scContainer time, .scContainer mark, .scContainer audio, .scContainer video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+.scContainer article, .scContainer aside, .scContainer details, .scContainer figcaption, .scContainer figure, 
+.scContainer footer, .scContainer header, .scContainer hgroup, .scContainer menu, .scContainer nav, .scContainer section {
+	display: block;
+}
+.scContainer ol, .scContainer ul {
+	list-style: none;
+}
+.scContainer blockquote, .scContainer q {
+	quotes: none;
+}
+.scContainer blockquote:before, .scContainer blockquote:after,
+.scContainer q:before, .scContainer q:after {
+	content: '';
+	content: none;
+}
+.scContainer table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* init */
+.scContainer div,
+.scContainer p,
+.scContainer span,
+.scContainer ul{
+	background-color: inherit;
+	color: inherit;
+	font: inherit;
+}
+.scContainer p{
+	margin: 10px 0 0;
+	padding: 0;
+}
+
+/**/
+.scContainer .scBold{font-weight: bold !important}
+.scContainer .scItalic{font-style: italic !important}
+.scContainer .scUnderline{text-decoration: underline !important}
+.scContainer .scFloatLeft{float: left}
+.scContainer .scFloatRight{float: right}
+.scContainer .scClearLeft{clear: left}
+.scContainer .scClearRight{clear: right}
+.scContainer .scClearBoth{clear: both}
+.scContainer .scOverflow{overflow: hidden}
+.scContainer .scAlignRight{text-align: right !important}
+.scContainer .scAlignCenter{text-align: center !important}
+.scContainer .scAlignMiddle{vertical-align: middle !important}
+.scContainer .scUpperCase{text-transform: uppercase !important}
+
+.scContainer a:link,
+.scContainer a:visited,
+.scContainer a:active{
+	color: #306dab;
+	display: inline;
+	outline: none;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.scContainer a:hover{
+	text-decoration: underline;
+}
+.scContainer a.scLink{
+	background: none;
+} 
+.scContainer .scForm{}
+.scContainer .scText,
+.scContainer .scSelect,
+.scContainer .scTextarea{
+	border: solid 1px #e7e6e6;
+	color: #777;
+	margin: 0;
+	outline: none;
+	padding: 8px;
+	
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.scContainer .scSelect{
+	-webkit-appearance: menulist-button;
+	line-height: 28px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	::i-block-chrome, .scContainer .scSelect {
+		text-indent: 8px;
+	}
+}
+.scContainer .scForm p{
+	overflow: hidden;
+}
+.scContainer .scTitle{
+	color: #78797c;
+	display: block;
+	padding: 0 0 5px;
+	text-transform: uppercase;
+}
+.scContainer span.scLeft,
+.scContainer .scValue{
+	display: block;
+	margin: 8px 0 0;
+}
+.scContainer .scRequired{
+	color: #CC0000;
+}
+.scContainer .scError{
+	color: #CC0000;
+}
+.scContainer input[type=checkbox],
+.scContainer input[type=radio]{
+	outline: none;
+}
+.scContainer input.scError,
+.scContainer select.scError,
+.scContainer textarea.scError{
+	background-color: #feeaeb;
+	border: solid 1px #f6cccd;
+	color: #c54b4a;
+}
+.scContainer label.scError{
+	display: block;
+	margin: 2px 0 0;
+}
+.scContainer .scValid{
+	background-color: #DDEEDD;
+	color: #006600;
+}
+.scContainer input.scValid,
+.scContainer select.scValid,
+.scContainer textarea.scValid{
+	border: solid 1px #AAD6AA;
+}
+
+.scContainer .scPL10{padding-left: 10px !important}
+.scContainer .scPL20{padding-left: 20px !important}
+.scContainer .scPL30{padding-left: 30px !important}
+.scContainer .scPL40{padding-left: 40px !important}
+.scContainer .scPL50{padding-left: 50px !important}
+
+.scContainer .scW50{width: 50px !important}
+.scContainer .scW100{width: 100px !important}
+.scContainer .scW150{width: 150px !important}
+.scContainer .scW200{width: 200px !important}
+.scContainer .scW250{width: 250px !important}
+.scContainer .scW300{width: 300px !important}
+.scContainer .scW350{width: 350px !important}
+.scContainer .scW400{width: 400px !important}
+.scContainer .scW450{width: 450px !important}
+.scContainer .scW500{width: 500px !important}
+.scContainer .scW550{width: 550px !important}
+.scContainer .scW600{width: 600px !important}
+.scContainer .scW650{width: 650px !important}
+.scContainer .scW700{width: 700px !important}
+.scContainer .scW750{width: 750px !important}
+
+.scContainer .scCaptcha{
+	border: solid 1px #ccc;
+	vertical-align: middle;
+}
+
+/* Product List */
+.scContainer .scProductItem{
+	border: solid 1px #fff;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+	width: 25%;
+	height: 364px;
+	float: left;
+}
+.scContainer .scProductItem:hover,
+.scContainer .scProductItemHover{
+	border-color: #ece8e8;
+}
+.scContainer .scProductItem:hover .scProductItemButtons,
+.scContainer .scProductItemHover .scProductItemButtons{
+	display: block;
+}
+.scContainer .scProductItemPic{
+	text-align: center;
+}
+.scContainer .scProductItemPic a{
+	display: inline-block;
+	margin: 10px;
+}
+.scContainer .scProductItemPic img{
+	border: none;
+	max-height: 210px;
+	max-width: 210px;
+	vertical-align: middle;
+}
+.scContainer .scProductItemInfo{
+	overflow: hidden;
+	text-align: center;
+}
+.scContainer .scProductItemName{
+	height: 38px;
+	overflow: hidden;
+	position: absolute;
+	bottom: 81px;
+	width: 100%;
+}
+.scContainer .scProductItemName a:link,
+.scContainer .scProductItemName a:visited,
+.scContainer .scProductItemName a:active{
+	background: none;
+	color: #306dab;
+	font-size: 16px;
+	line-height: 18px;
+	padding: 0 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.scContainer .scProductItemName a:hover{
+	text-decoration: underline;
+}
+.scContainer .scProductItemPrice{
+	color: #404040;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 18px;
+	position: absolute;
+	bottom: 53px;
+	width: 100%;
+}
+.scContainer .scProductItemOutOfStock{
+	position: absolute;
+	bottom: 15px;
+	left: 0;
+	width: 100%;
+}
+.scContainer .scProductOutOfStock{
+	background: #f7f8f9 url(../img/frontend/icon-out.png) left center no-repeat;
+	border: solid 1px #e4e4e4;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: inset 0 0 3px #f0f1f2;
+	-webkit-box-shadow: inset 0 0 3px #f0f1f2;
+	box-shadow: inset 0 0 3px #f0f1f2;
+	color: #575653;
+	font-size: 14px;
+	font-weight: normal;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 5px 5px 5px 25px;
+	text-transform: lowercase;
+	text-align: center;
+}
+.scContainer .scProductItemButtons{
+	display: none;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+}
+.scContainer .scProductItemButtons .scButton{
+	margin-bottom: 2px;
+}
+/* Product Details */
+.scContainer .scProduct{
+	margin: 0 0 10px;
+	overflow: hidden;
+	padding: 10px;
+}
+.scContainer .scProductGallery{
+	float: left;
+	width: 31%;
+}
+.scContainer .scProductGallery img{
+	border: none;
+}
+.scContainer .scProductPic{
+	background-color: #fff;
+	border: solid 1px #ece8e8;
+	text-align: center;
+}
+.scContainer .scProductPic img{
+	max-width: 100%;
+}
+.scContainer .scProductThumbs{
+	margin: 10px 0 0;
+	width: 100%;
+}
+.scContainer .scProductThumbs a:link,
+.scContainer .scProductThumbs a:visited,
+.scContainer .scProductThumbs a:active,
+.scContainer .scProductThumbs a:hover,
+.scContainer .scProductThumbs a:focus{
+	border: solid 1px #fff;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #fff;
+	display: inline-block;
+	padding: 5px;
+	margin: 0 0 5px 0;
+	overflow: hidden;
+	text-align: center;
+	max-width: 25%;
+}
+.scContainer .scProductThumbs a:hover{
+	border-color: #ece8e8;
+}
+.scContainer .scProductThumbs img{
+	max-width: 100%;
+}
+.scContainer .scProductDesc{
+	font: normal 16px/24px PTSansRegular, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+.scContainer .scProductInfo{
+	float: right;
+	width: 69%;
+}
+.scContainer .scProductInfoInner{
+	margin: 0 0 0 25px;
+}
+.scContainer .scProductHeadingBox{
+	float: right;
+	width: 69%;
+}
+.scContainer .scProductName{
+	color: #306dab;
+	font: bold 28px/30px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+}
+.scContainer .scProductPrice{
+	color: #404040;
+	font: bold 30px/32px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	margin: 10px 0;
+}
+.scContainer .scProductAttributes{
+	overflow: hidden;
+}
+.scContainer .scProductAttrBox{
+	float: left;
+	margin: 0 5px 5px 0;
+	padding: 1px;
+}
+.scContainer .scProductAttrName{
+	height: 18px;
+	line-height: 18px;
+	overflow: hidden;
+	text-transform: uppercase;
+}
+.scContainer .scProductAttrValues{
+}
+.scContainer .scProductExtras{
+	overflow: hidden;
+}
+.scContainer .scProductExtraBox{
+	margin: 0 0 10px;
+}
+.scContainer .scProductControl{
+	background-color: #f8f8f8;
+	border: solid 1px #ece8e8;
+	overflow: hidden;
+	padding: 15px 15px 42px 15px;
+	position: relative;
+}
+.scContainer .scProductControlFoot{
+	background-color: #fff;
+	border-top: solid 1px #edeaea;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	min-height: 36px;
+	height: auto !important;
+	height: 36px;
+	text-indent: 0;
+	overflow: hidden;
+}
+.scContainer .scProductSimilarWrapper{
+	overflow: hidden;
+}
+.scContainer .scProductSimilarBox{
+	height: 266px;
+	overflow: hidden;
+}
+.scContainer .scProductSimilar{
+	background-color: #fff;
+	border: solid 1px #ece8e8;
+	float: left;
+	height: 264px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 5px 0 0;
+	text-align: center;
+	width: 19%;
+}
+.scContainer .scProductSimilarPic{
+	
+}
+.scContainer .scProductSimilarPic a{
+	display: inline-block;
+	margin: 10px;
+}
+.scContainer .scProductSimilarPic img{
+	border: none;
+	max-height: 165px;
+	vertical-align: middle;
+}
+.scContainer .scProductSimilarInfo{
+	overflow: hidden;
+}
+.scContainer .scProductSimilarName{
+	color: #306dab;
+	font: bold 14px/18px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	position: absolute;
+	bottom: 40px;
+	height: 38px;
+	overflow: hidden;
+	width: 100%;
+}
+.scContainer .scProductSimilarName a{
+	background: none;
+}
+.scContainer .scProductSimilarPrice{
+	color: #404040;
+	font: bold 18px/20px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+}
+.scContainer .scSelectorSend2FriendBox{
+	border: solid 1px #ece8e8;
+	margin: 15px 0 0;
+	padding: 0 20px;
+	overflow: hidden;
+}
+	
+.scContainer a.scButtonAdd2Favs:link, 
+.scContainer a.scButtonAdd2Favs:visited,
+.scContainer a.scButtonAdd2Favs:active,
+.scContainer a.scButtonSend2Friend:link,
+.scContainer a.scButtonSend2Friend:visited,
+.scContainer a.scButtonSend2Friend:active{
+	color: #959697;
+	display: inline-block;
+	height: 18px;
+	line-height: 18px;
+	/*margin: 8px 12px 0 0;*/
+	margin: 8px 0 0 16px;
+	text-indent: 22px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.scContainer a.scButtonAdd2Favs:hover,
+.scContainer a.scButtonSend2Friend:hover{
+	text-decoration: underline;
+}
+.scContainer .scButtonAdd2Favs{
+	background: url(../img/frontend/layout-1/icon-add2favs.png) left center no-repeat;
+}
+.scContainer .scButtonAdd2FavsIn{
+	background: url(../img/frontend/layout-1/icon-add2favs-in.png) left center no-repeat;
+}
+.scContainer .scButtonSend2Friend{
+	background: url(../img/frontend/layout-1/icon-send2friend.png) left center no-repeat;
+}
+.scContainer .scProductSpinner{
+	border: solid 1px #e7e6e6;
+	overflow: hidden;
+	height: 34px;
+	width: 100px;
+}
+.scContainer .scProductSpinButton:link,
+.scContainer .scProductSpinButton:visited,
+.scContainer .scProductSpinButton:active{
+	background-color: #fbfbfb;
+	border: none;
+	color: #b8babc;
+	display: inline-block;
+	float: left;
+	line-height: 34px;
+	height: 100%;
+	text-align: center;
+	text-decoration: none;
+	width: 30%;
+}
+.scContainer .scProductSpinButton:hover{
+	text-decoration: none;
+}
+.scContainer .scProductSpinValue{
+	background-color: #fff;
+	float: left;
+	border: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-left: solid 1px #e7e6e6;
+	border-right: solid 1px #e7e6e6;
+	height: 100%;
+	text-align: center;
+	width: 40%;
+}
+
+.scContainer .scProductAttrRow,
+.scContainer .scProductOpt{
+	margin: 10px 0 0;
+	overflow: visible;
+}
+.scContainer .scProductAttr{
+	border: solid 1px #ccc;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	margin: 0 2px 2px 0;
+	padding: 1px 5px;
+}
+.scContainer a.scProductAttr:link,
+.scContainer a.scProductAttr:visited,
+.scContainer a.scProductAttr:active{
+	text-decoration: none;
+}
+.scContainer a.scProductAttr:hover{
+	background-color: #eee;
+}
+.scContainer a.scProductAttrSelected{
+	background-color: #ededed;
+}
+.scContainer .scSelectorPriceBox{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+/* Paginator */
+.scContainer .scPaginator{
+	list-style: none;
+	margin: 15px 0 0;
+	overflow: hidden;
+	padding: 0;
+}
+.scContainer .scPaginator li{
+	float: left;
+}
+.scContainer .scPaginator a:link,
+.scContainer .scPaginator a:visited,
+.scContainer .scPaginator a:active{
+	background-color: #f8f8f8;
+	border: solid 1px #e7e6e6;
+	color: #306dab;
+	float: left;
+	font-size: 16px;
+	line-height: 18px;
+	margin: 0 4px 4px 0;
+	padding: 8px 13px;
+	text-align: center;
+	text-decoration: none;
+}
+.scContainer .scPaginator a:hover{
+	background-color: #eee;
+	text-decoration: none;
+}
+.scContainer .scPaginator a.scPaginatorFocus{
+	background-color: #404040;
+	border: solid 1px #404040;
+	color: #fff;
+}
+
+/* Form */
+.scContainer .scSelect{
+	border: solid 1px #e7e6e6;
+	padding: 8px;
+}
+/* Table */
+.scContainer .scTable1{
+	background-color: #fff;
+	border: solid 1px #ece8e8;
+}
+.scContainer .scTable1HeadRow{
+	background-color: #fff;
+	clear: left;
+	overflow: hidden;
+}
+.scContainer .scTable1BodyRow{
+	background-color: #f8f8f8;
+	clear: left;
+	overflow: hidden;
+	
+	min-height: 73px;
+	height: auto !important;
+	height: 73px;
+}
+.scContainer .scTable1FootRow{
+	background-color: #fff;
+	clear: left;
+	overflow: hidden;
+}
+.scContainer .scTable1TopRow{
+	border-top: solid 1px #ece8e8;
+}
+.scContainer .scTable1Td{
+	padding: 6px;
+}
+.scContainer .scTable1Td a{
+	background: none;
+}
+.scContainer .scTable1ThDel, 
+.scContainer .scTable1TdDel{
+	/*background: orange;*/
+	float: left;
+	width: 5%;
+	text-align: center;
+}
+.scContainer .scTable1ThPic, 
+.scContainer .scTable1TdPic{
+	/*background: green;*/
+	float: left;
+	width: 6%;
+}
+.scContainer .scTable1ThPic{
+	display: none;
+	width: 0;
+}
+.scContainer .scTable1TdPic img{
+	max-width: 45px;
+}
+.scContainer .scTable1ThName, 
+.scContainer .scTable1TdName{
+	float: left;
+	width: 52%;/*53*/
+}
+.scContainer .scTable1ThName{
+	width: 58%;/*59*/
+}
+.scContainer .scTable1ThPrice, 
+.scContainer .scTable1TdPrice{
+	/*background: yellow;*/
+	color: #404244;
+	float: left;
+	font: bold 16px/18px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	width: 9%;
+	text-align: right;
+}
+.scContainer .scTable1ThQty, 
+.scContainer .scTable1TdQty{
+	float: left;
+	min-width: 12%;
+	max-width: 13%;
+	/*width: 12%;*/
+}
+.scContainer .scTable1ThTotal, 
+.scContainer .scTable1TdTotal{
+	/*background: brown;*/
+	color: #404244;
+	float: left;
+	font: bold 18px/18px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	width: 15%;
+	text-align: right;
+}
+.scContainer .scTable1ThNamePrice,
+.scContainer .scTable1ThQtyTotal{
+	display: none;
+	float: left;
+	width: 0;
+}
+.scContainer .scTable1TdFootLabel{
+	/*background: cyan;*/
+	float: left;
+	width: 85%;
+	text-align: right;
+	
+	color: #78797c;
+	font-weight: normal;
+	padding: 10px 0;
+	text-transform: uppercase;
+}
+.scContainer .scTable1TdFootValue{
+	/*background: navy;*/
+	float: left;
+	width: 15%;
+	padding: 10px 0;
+	text-align: right;
+}
+.scContainer .scTable1Th{
+	color: #78797c;
+	font: normal 14px/18px ArchivoNarrowRegular, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	padding: 14px 6px;
+	text-transform: uppercase;
+}
+.scContainer .scTable1FormatPrices{
+	color: #404244;
+	font: normal 16px/18px ArchivoNarrowRegular, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+.scContainer .scTable1FormatSubTotal{
+	color: #404244;
+	font: bold 18px/18px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+.scContainer .scTable1FormatTotal{
+	color: #404244;
+	font: bold 24px/18px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+
+.scContainer .scTable{
+	border-collapse: separate;
+	border: solid 1px #ece8e8;
+	color: #222;
+	margin: 0 0 10px;
+	width: 100%;
+}
+.scContainer .scTable thead th{
+	color: #78797c;
+	text-align: left;
+	background-color: #fff;
+	border: none;
+	border-bottom: solid 1px #ece8e8;
+	font-weight: normal;
+	padding: 15px 12px;
+	empty-cells: show;
+	text-transform: uppercase;
+}
+.scContainer .scTable tbody td{
+	background-color: #f8f8f8;
+	border: none;
+	border-bottom: solid 1px #ece8e8;
+	color: #404244;
+	padding: 10px 12px;
+	empty-cells: show;
+	text-transform: uppercase;
+}
+.scContainer .scTable tfoot td{
+	background-color: #fff;
+	border: none;
+	color: #78797c;
+	padding: 10px 12px;
+	empty-cells: show;
+	text-transform: uppercase;
+}
+.scContainer .scCartRemove,
+.scContainer a.scCartRemove{
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	background: url(../img/frontend/layout-1/icon-remove.png) center center no-repeat;
+}
+.scContainer a.scProductLink:link,
+.scContainer a.scProductLink:visited,
+.scContainer a.scProductLink:active,
+.scContainer a.scProductLink:focus{
+	color: #306dab;
+	font: bold 14px/18px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.scContainer a.scProductLink:hover{
+	text-decoration: underline;
+}
+.scContainer a.scProductImageLink:link,
+.scContainer a.scProductImageLink:active,
+.scContainer a.scProductImageLink:visited{
+	border: solid 1px #ece8e8;
+	overflow: hidden;
+	display: inline-block;
+}
+.scContainer a.scProductImageLink:hover{
+	border: solid 1px #C8BEBE;
+}
+.scContainer a.scProductImageLink img{
+	border: none;
+	vertical-align: middle;
+}
+
+/* Category Menu */
+.scContainer .scMenuBar,
+.scContainer .scMenu{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.scContainer .scMenuBar{
+	background-color: #fff;
+	border-bottom: solid 1px #eee7e7;
+	height: 36px;
+	margin: 10px 0 15px;
+}
+.scContainer .scMenuBar a:link,
+.scContainer .scMenuBar a:visited,
+.scContainer .scMenuBar a:active,
+.scContainer .scMenuBar a:hover{
+	background: none;
+	color: #9d9c9c;
+	text-transform: uppercase;
+	text-decoration: none;
+	font: bold 16px/18px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	display: inline-block;
+	padding: 10px 20px;
+	overflow: hidden;
+	outline: none;
+}
+.scContainer .scMenuBarItem{
+	background-color: #fff;
+	height: 36px;
+	float: left;
+	margin: 0;
+	padding: 0 18px 0 0;
+	position: relative;
+}
+.scContainer .scMenuBarItem .scMenu{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+}
+.scContainer .scMenuBarItem:active,
+.scContainer .scMenuBarItemActive{
+	background-color: #404040;
+}
+.scContainer .scMenuBarItem:active > a:link,
+.scContainer .scMenuBarItem:active > a:visited,
+.scContainer .scMenuBarItem:active > a:active,
+.scContainer .scMenuBarItem:active > a:hover,
+.scContainer .scMenuBarItem:active > a:focus,
+.scContainer .scMenuBarItemActive > a:link,
+.scContainer .scMenuBarItemActive > a:visited,
+.scContainer .scMenuBarItemActive > a:active,
+.scContainer .scMenuBarItemActive > a:hover,
+.scContainer .scMenuBarItemActive > a:focus{
+	color: #fff;
+	outline: none;
+}
+.scContainer .scMenuBarItem:hover,
+.scContainer .scMenuBarItemHover{
+	background-color: #afacac;
+}
+.scContainer .scMenuBarItemHub:hover,
+.scContainer .scMenuBarItemHover.scMenuBarItemHub{
+	background: #afacac url(../img/frontend/icon-arrow-down.png) right center no-repeat;
+}
+.scContainer .scMenuBarItem:hover > .scMenu,
+.scContainer .scMenuBarItemHover > .scMenu{
+	display: block;
+}
+.scContainer .scMenuBarItem:hover > a:link,
+.scContainer .scMenuBarItem:hover > a:visited,
+.scContainer .scMenuBarItem:hover > a:active,
+.scContainer .scMenuBarItem:hover > a:hover,
+.scContainer .scMenuBarItem:hover > a:focus,
+.scContainer .scMenuBarItemHover > a:link,
+.scContainer .scMenuBarItemHover > a:visited,
+.scContainer .scMenuBarItemHover > a:active,
+.scContainer .scMenuBarItemHover > a:hover,
+.scContainer .scMenuBarItemHover > a:focus{
+	color: #fff;
+	outline: none;
+}
+
+.scContainer .scMenu{
+	min-width: 100%;
+	z-index: 1;
+}
+.scContainer .scMenu a:link,
+.scContainer .scMenu a:visited,
+.scContainer .scMenu a:active,
+.scContainer .scMenu a:hover{
+	color: #e6e4e4;
+	outline: none;
+	white-space: nowrap;
+}
+.scContainer .scMenuItem{
+	background-color: #afacac;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.scContainer .scMenuItemHub{
+	background: #afacac url(../img/frontend/icon-arrow-right.png) right center no-repeat;
+}
+.scContainer .scMenuItem .scMenu{
+	display: none;
+	position: absolute;
+	left: 100%;
+	top: 0;
+}
+.scContainer .scMenuItemHover > .scMenu{
+	display: block;
+}
+.scContainer .scMenuItemHover > a:link,
+.scContainer .scMenuItemHover > a:visited,
+.scContainer .scMenuItemHover > a:active,
+.scContainer .scMenuItemHover > a:hover{
+	color: #F1F1F1;
+	outline: none;
+}
+
+/* Account menu */
+.scContainer .scAccountMenu{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	height: 30px;
+	float: right;
+}
+.scContainer .scAccountMenu li{
+	float: right;
+	margin: 0 0 0 10px;
+}
+.scContainer .scAccountMenu li a:link,
+.scContainer .scAccountMenu li a:active,
+.scContainer .scAccountMenu li a:visited{
+	background: none;
+	color: #306dab;
+	line-height: 30px;
+	padding: 0 0 0 10px;
+	text-decoration: none;
+}
+.scContainer .scAccountMenu li a:hover{
+	text-decoration: underline;
+}
+/* Header */
+.scContainer .scHeader{
+	overflow: hidden;
+}
+.scContainer .scHeaderLimiter{
+	display: none;
+}
+.scContainer .scHeaderClear{
+	clear: left;
+}
+.scContainer .scMenuDropdown{
+	margin: 0 0 15px;
+	width: 100%;
+}
+/* Search form */
+.scContainer .scSearchForm{
+	float: left;
+	width: 65%;
+}
+.scContainer .scSearchFormInput{
+	background: #fff url(../img/frontend/layout-1/icon-search.png) right center no-repeat;
+	border: solid 1px #e7e6e6;
+	-moz-box-shadow: inset 0 0 5px #f6f6f6;
+	-webkit-box-shadow: inset 0 0 5px #f6f6f6;
+	box-shadow: inset 0 0 5px #f6f6f6;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #999;
+	font: normal 14px/16px Arial, sans-serif;
+	outline: none;
+	padding: 0 0 0 8px;
+	height: 43px;
+	width: 100%;
+}
+/* Checkout/Cart menu */
+.scContainer .scCartMenu{
+	background-color: #F8F8F8;
+	border: solid 1px #e7e6e6;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: right;
+	height: 43px;
+	overflow: hidden;
+	width: auto;
+}
+.scContainer .scCartMenu li{
+	background-color: #f8f8f8;
+	border: none;
+	border-right: solid 1px #e7e6e6;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	height: 43px;
+	/*width: 33%;*/
+	white-space: nowrap;
+}
+.scContainer .scCartMenu li:nth-child(even){
+	/*width: 25%;*/
+}
+.scContainer .scCartMenu li:last-child{
+	border-right: none;
+	/*width: 35%;*/
+}
+.scContainer .scCartMenu li.scCartMenuIcon{
+	background: #f8f8f8 url(../img/frontend/layout-1/icon-cart.png) left center no-repeat;
+	/*width: 40%;*/
+}
+.scContainer .scCartMenu li a:link,
+.scContainer .scCartMenu li a:active,
+.scContainer .scCartMenu li a:visited,
+.scContainer .scCartMenu li a:hover{
+	background: none;
+	color: #928f8f;
+	line-height: 43px;
+	display: inline-block;
+	padding: 0 10px;
+	text-decoration: none;
+}
+.scContainer .scCartMenu li.scCartMenuIcon a{
+	text-indent: 35px;
+}
+
+/* Buttons & Links */
+.scContainer .scButton,
+.scContainer a.scButton{
+	border: solid 1px #000;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: inline-block;
+	font: bold 16px/18px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif; 
+	height: 31px;
+	line-height: 31px;
+	margin: 0;
+	padding: 0 10px;
+	text-align: center;
+	text-decoration: none !important;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+.scContainer .scButtonDark,
+.scContainer .scButtonDark:link,
+.scContainer .scButtonDark:visited{
+	background-color: #404040;
+	border-color: #000;
+	color: #d9d9d9;
+}
+.scContainer .scButtonDark:active,
+.scContainer .scButtonDarkActive{
+	background-color: #555;
+	-moz-box-shadow: inset 0 0 3px #343434;
+	-webkit-box-shadow: inset 0 0 3px #343434;
+	box-shadow: inset 0 0 3px #343434;
+	line-height: 32px;
+}
+.scContainer .scButtonDark:hover,
+.scContainer .scButtonDarkHover{
+	background: #616161;
+	background: -moz-linear-gradient(top,  #616161 0%, #404040 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#616161), color-stop(100%,#404040));
+	background: -webkit-linear-gradient(top,  #616161 0%,#404040 100%);
+	background: -o-linear-gradient(top,  #616161 0%,#404040 100%);
+	background: -ms-linear-gradient(top,  #616161 0%,#404040 100%); 
+	background: linear-gradient(to bottom,  #616161 0%,#404040 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#616161', endColorstr='#404040',GradientType=0 );
+	border-color: #404040;
+	color: #fff;
+}
+.scContainer .scButtonDark:focus,
+.scContainer .scButtonDarkFocus{
+	-moz-box-shadow: 0 0 5px #999;
+	-webkit-box-shadow: 0 0 5px #999;
+	box-shadow: 0 0 5px #999;
+	border-color: #000;
+	color: #fff;
+	outline: none;
+}
+.scContainer .scButtonDark:disabled,
+.scContainer .scButtonDarkDisabled{
+	background: none;
+	background-color: #c8c8c8;
+	border-color: #a09e9e;
+	-moz-box-shadow: inset 0 3px 5px #c9c9c9;
+	-webkit-box-shadow: inset 0 3px 5px #c9c9c9;
+	box-shadow: inset 0 3px 5px #c9c9c9;
+	color: #e7e4e4;
+	cursor: default;
+}
+
+.scContainer .scButtonLight,
+.scContainer .scButtonLight:link,
+.scContainer .scButtonLight:visited{
+	background-color: #afacac;
+	border-color: #8f8989;
+	color: #f6f6f6;
+}
+.scContainer .scButtonLight:active,
+.scContainer .scButtonLightActive{
+	background-color: #9a9595;
+	border-color: #7e7676;
+	-moz-box-shadow: inset 0 0 5px #827e7e;
+	-webkit-box-shadow: inset 0 0 5px #827e7e;
+	box-shadow: inset 0 0 5px #827e7e;
+	color: #f6f6f6;
+	line-height: 32px;
+}
+.scContainer .scButtonLight:hover,
+.scContainer .scButtonLightHover{
+	background: #aeabab; /* Old browsers */
+	background: -moz-linear-gradient(top,  #aeabab 0%, #8f8989 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#aeabab), color-stop(100%,#8f8989)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #aeabab 0%,#8f8989 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #aeabab 0%,#8f8989 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #aeabab 0%,#8f8989 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #aeabab 0%,#8f8989 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aeabab', endColorstr='#8f8989',GradientType=0 ); /* IE6-9 */
+	border-color: #8f8989;
+	color: #fff;
+}
+.scContainer .scButtonLight:focus,
+.scContainer .scButtonLightFocus{
+	-moz-box-shadow: 0 0 5px #A6A6A6;
+	-webkit-box-shadow: 0 0 5px #A6A6A6;
+	box-shadow: 0 0 5px #A6A6A6;
+	border-color: #645E5E;
+	color: #fff;
+	outline: none;
+}
+.scContainer .scButtonLight:disabled,
+.scContainer .scButtonLightDisabled{
+	background: none;
+	background-color: #e9e7e7;
+	border-color: #d5d3d3;
+	-moz-box-shadow: inset 0 3px 5px #e7e4e4;
+	-webkit-box-shadow: inset 0 3px 5px #e7e4e4;
+	box-shadow: inset 0 3px 5px #e7e4e4;
+	color: #cec9c9;
+	cursor: default;
+}
+
+/* General */
+.scContainer .scColorOrange{
+	color: #f16b12 !important;
+}
+.scContainer .scColorBlue{
+	color: #306dab !important;
+}
+.scContainer .scColorGray{
+	color: #babcbe !important;
+}
+.scContainer h1.scHeading{
+	color: #306dab;
+	font: bold 28px/28px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	margin: 25px 0 20px;
+	padding: 0;
+	text-transform: uppercase;
+}
+.scContainer h3.scHeading{
+	color: #626364;
+	font: bold 18px/20px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	margin: 20px 0 15px;
+	padding: 0;
+	text-transform: uppercase;
+}
+/* Paper */
+.scContainer .scPaper{
+	background-color: #fff;
+	border: solid 1px #ece8e8;
+	overflow: hidden;
+}
+.scContainer .scPaperSidebar{
+	float: left;
+	width: 24%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.scContainer .scPaperSidebarText{
+	padding: 20px;
+}
+.scContainer .scPaperSheet{
+	background-color: #f8f8f8;
+	float: right;
+	width: 76%;
+	border-left: solid 1px #ece8e8;
+	border-bottom: solid 1px #ece8e8;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.scContainer .scPaperControl{
+	background-color: #fff;
+	float: right;
+	width: 76%;
+}
+.scContainer .scPaperControlInner{
+	padding: 20px 0 20px 30px;
+}
+.scContainer .scPaperHeading{
+	background-color: #fff;
+	border-bottom: solid 1px #ece8e8;
+	color: #232528;
+	font: bold 16px/16px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	padding: 15px 30px;
+	text-transform: uppercase;
+}
+.scContainer .scPaperHeadingTop{
+	border-top: solid 1px #ece8e8;
+}
+.scContainer .scPaperContent{
+	overflow: hidden;
+	padding: 30px 30px 5px;
+}
+.scContainer .scPaperChain{
+	float: left;
+	width: 50%;
+	margin: 0 0 25px;
+	overflow: hidden;
+	padding: 0;
+}
+.scContainer .scPaperUnchained{
+	clear: left;
+	margin: 0 0 25px;
+	overflow: hidden;
+	padding: 0;
+}
+.scContainer .scPaperContent .scPaperChain:nth-child(odd){
+	clear: left;
+}
+.scContainer .scCheckoutTable{
+	margin: 25px 0 0;
+	text-transform: uppercase;
+	width: 100%;
+}
+.scContainer .scCheckoutTable td{
+	padding: 5px;
+}
+.scContainer .scCheckoutTableProduct{
+	text-align: right;
+}
+.scContainer .scCheckoutTableProductName{
+	color: #333;
+	font: normal 15px/20px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+.scContainer .scCheckoutTableLabel{
+	color: #78797c;
+	text-align: right;
+	width: 60%;
+}
+.scContainer .scCheckoutTableValue{
+	color: #404244;
+	font: normal 16px/24px ArchivoNarrowRegular, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+.scContainer .scCheckoutTableTotal{
+	font: bold 24px/36px ArchivoNarrowBold, "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+.scContainer .scAddressHolder{
+	overflow: hidden;
+}
+.scContainer .scAddressHolder:not(:first-child){
+	border-top: solid 2px #ECE8E8;
+	padding-top: 15px;
+}
+/* Locale menu */
+.scContainer .scLocaleMenu{
+	margin: 0 0 10px 10px;
+	padding: 0;
+	list-style: none;
+	float: right;
+	border-right: solid 1px #dad6d7;
+}
+.scContainer .scLocaleMenu li{
+	display: inline-block;
+	margin: 0;
+	width: 34px;
+	height: 29px;
+}
+.scContainer .scLocaleMenu li a{
+	display: inline-block;
+	width: 33px;
+	height: 29px;
+	background-color: #F6F4F5;
+	border: solid 1px #dad6d7;
+	border-right: none;
+	position: relative;
+	text-decoration: none;
+	font-size: 0;
+	vertical-align: bottom;
+}
+.scContainer .scLocaleMenu li a img{
+	border: none;
+	position: absolute;
+	top: 9px;
+	left: 9px;
+}
+.scContainer .scLocaleMenu li a:hover{
+	background-color: #fff;
+}
+.scContainer .scLocaleMenu li a:active, 
+.scContainer .scLocaleMenu li a:focus, 
+.scContainer .scLocaleMenu li a.scLocaleFocus{
+	background-color: #fff;
+	-moz-box-shadow: inset 0 0 5px #F2F2F2;
+	-webkit-box-shadow: inset 0 0 5px #F2F2F2;
+	box-shadow: inset 0 0 5px #F2F2F2;
+}
+/* Notice & Messages */
+.scContainer .scNotice{
+	margin: 0 0 10px;
+	position: relative;
+	padding: 16px 19px;
+	text-transform: uppercase;
+}
+.scContainer .scNoticeIcon{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 4px;
+}
+.scContainer .scNoticeError .scNoticeIcon{background-color: #f6cccd;}
+.scContainer .scNoticeSuccess .scNoticeIcon{background-color: #99d3a1;}
+.scContainer .scNoticeInfo .scNoticeIcon{background-color: #d3cba4;}
+.scContainer .scNoticeError{
+	background-color: #feeaeb;
+	border: solid 1px #f6cccd;
+	color: #c54b4a;
+}
+.scContainer .scNoticeSuccess{
+	background-color: #e4f5e3;
+	border: solid 1px #99d3a1;
+	color: #6fa478;
+}
+.scContainer .scNoticeInfo{
+	background-color: #faf4d2;
+	border: solid 1px #d3cba4;
+	color: #b6a452;
+}
+.scContainer .scMessage{
+	background-color: #f1f1f1;
+	padding: 23px 18px; 
+	position: relative;
+	text-transform: uppercase;
+}
+.scContainer .scMessage .scMessageIcon{
+	background-color: #dadada;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 4px;
+}
+
+.scContainer .scBreadcrumb{
+	margin: 0 0 10px;
+}
+.scContainer .scBreadcrumb li{
+	display: inline;
+	text-transform: uppercase;
+}
+.scContainer .scBreadcrumb li:not(:last-child):after{
+	content: " > ";
+}
+.scContainer .scBreadcrumb a:link,
+.scContainer .scBreadcrumb a:visited,
+.scContainer .scBreadcrumb a:active,
+.scContainer .scBreadcrumb a:hover,
+.scContainer .scBreadcrumb a:focus{
+
+}
+
+.scContainer .scInterMenu{
+	float: left;
+	width: 60%;
+	overflow: hidden;
+}
+.scContainer .scInterMenu a{
+	margin: 8px 0 0 12px;
+}
+
+.scContainer .scSocialMenu{
+	float: right;
+	max-width: 40%;
+	width: auto;
+	padding: 7px 0 0 0;
+	overflow: hidden;
+}
+.scContainer a.scSocial{
+	display: inline-block;
+	float: left;
+	width: 22px;
+	height: 21px;
+	margin: 0 5px 0 0;
+	padding: 0;
+}
+.scContainer a.scSocialFacebook{
+	background: url(../img/frontend/social-facebook.png) 0 0 no-repeat;
+}
+.scContainer a.scSocialGoogle{
+	background: url(../img/frontend/social-google.png) 0 0 no-repeat;
+}
+.scContainer a.scSocialTwitter{
+	background: url(../img/frontend/social-twitter.png) 0 0 no-repeat;
+}
+.scContainer a.scSocialLinkedIn{
+	background: url(../img/frontend/social-linkedin.png) 0 0 no-repeat;
+}
+.scContainer a.scSocial:hover{
+	background-position: 0 -21px;
+}
+
+.scContainer .scHTML strong,
+.scContainer .scHTML b{
+	font-weight: bold;
+}
+.scContainer .scHTML em,
+.scContainer .scHTML i{
+	font-style: italic;
+}
+.scContainer .scHTML u{
+	text-decoration: underline;
+}
+.scContainer .scHTML ul{
+	list-style: disc;
+	list-style-position: inside;
+}
+.scContainer .scHTML ol{
+	list-style: decimal;
+	list-style-position: inside;
+}
+.scContainer .scHTML sup{
+	vertical-align: super;
+	font-size: 0.8em;
+}
+.scContainer .scHTML sub{
+	vertical-align: sub;
+	font-size: 0.8em;
+}
+.scContainer .scHTML table,
+.scContainer .scHTML th,
+.scContainer .scHTML td{
+	border-width: 1px;
+	border-style: solid;
+	border-collapse: separate;
+}
+.scContainer .scHTML h1{font-weight: bold; font-size: 1.4em}
+.scContainer .scHTML h2{font-weight: bold; font-size: 1.3em}
+.scContainer .scHTML h3{font-weight: bold; font-size: 1.2em}
+.scContainer .scHTML h4{font-weight: bold; font-size: 1.1em}
+.scContainer .scHTML h5{font-weight: bold; font-size: 1em}
+.scContainer .scHTML h6{font-weight: bold; font-size: 0.9em}
+/* Responsive design */
+@media screen and (max-width: 479px) {
+	.scContainer{
+		width: 100%;
+	}
+	.scContainer .scMenuBar{
+		display: none;
+	}
+	.scContainer .scSearchForm{
+		float: none;
+		margin: 0 0 10px;
+		width: 100%;
+	}
+	.scContainer .scSearchFormInput{
+		width: 100%;
+	}
+	.scContainer .scCartMenu{
+		float: none;
+		margin: 0 0 10px;
+		width: 100%;
+	}
+	.scContainer .scCartMenu li{
+		width: 30%;
+	}
+	.scContainer .scCartMenu li:first-child{
+		width: 40%;
+	}
+	.scContainer .scProductItem{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scProductSimilarBox{
+		height: auto;
+		overflow: visible;
+	}
+	.scContainer .scProductSimilar{
+		float: none;
+		height: 264px;
+		margin: 0 0 10px;
+		width: auto;
+	}
+	.scContainer .scProductSimilarPic img{
+		max-height: 158px;
+	}
+	.scContainer .scProductGallery{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scProductInfo{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scProductInfoInner{
+		margin: 0;
+	}
+	.scContainer .scProductHeadingBox{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scTable1BodyRow{
+		min-height: 120px;
+		height: auto !important;
+		height: 120px;
+	}
+	.scContainer .scTable1ThDel, 
+	.scContainer .scTable1TdDel{
+		width: 8%;
+	}
+	.scContainer .scTable1ThDel .scTable1Th, 
+	.scContainer .scTable1TdDel .scTable1Td{
+		padding: 6px 3px;
+	}
+	.scContainer .scTable1TdPic{
+		width: 22%;
+	}
+	.scContainer .scTable1TdPic img{
+		max-width: 45px;
+	}
+	.scContainer .scTable1TdName{
+		width: 70%;
+	}
+	.scContainer .scTable1ThName{
+		display: none;
+		width: 0;
+	}
+	.scContainer .scTable1TdPrice{
+		clear: left;
+		width: 29%;
+	}
+	.scContainer .scTable1ThPrice{
+		display: none;
+		width: 0;
+	}
+	.scContainer .scTable1ThNamePrice{
+		display: block;
+		width: 20%;
+	}
+	.scContainer .scTable1ThQty, 
+	.scContainer .scTable1TdQty{
+		width: 43%;
+	}
+	.scContainer .scTable1ThQty{
+		text-align: right;
+	}
+	.scContainer .scProductSpinner{
+		float: right;
+	}
+	.scContainer .scTable1ThTotal, 
+	.scContainer .scTable1TdTotal{
+		width: 28%;
+	}
+	.scContainer .scTable1TdFootLabel{
+		width: 50%;
+	}
+	.scContainer .scTable1TdFootValue{
+		width: 50%;
+	}
+	.scContainer .scPaperSidebar{
+		float: none;
+		width: auto;
+		border-bottom: solid 1px #ece8e8;
+	}
+	.scContainer .scCheckoutTableLabel{
+		width: 45%;
+	}
+	.scContainer .scCheckoutTableValue{
+		width: 55%;
+	}
+	.scContainer .scTable1TdFootValue .scSelect{
+		width: 80%;
+	}
+	.scContainer .scTable1TdFootValue .scText{
+		width: 70%;
+	}
+	.scContainer .scPaperSheet,
+	.scContainer .scPaperControl{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scPaperSheet .scPaperChain{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scPaperSheet .scText,
+	.scContainer .scPaperSheet .scTextarea{
+		width: 90%;
+	}
+	.scContainer .scPaperSheet .scSelect{
+		width: 93.7%;
+	}
+	.scContainer .scPaperSheet .scTextarea{
+		height: 110px;
+	}
+	.scContainer .scSelectorSend2FriendBox .scPaperChain{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scSelectorSend2FriendBox .scText{
+		width: 90%;
+	}
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+	.scContainer{
+		width: 100%;
+	}
+	.scContainer .scMenuBar{
+		display: none;
+	}
+	.scContainer .scHeaderLimiter3{
+		display: block;
+		clear: both;
+	}
+	.scContainer .scCartMenu{
+		float: left;
+		width: 45%;
+	}
+	.scContainer .scLocaleMenu{
+		
+	}
+	.scContainer .scAccountMenu{
+		float: right;
+		width: 35%;
+	}
+	.scContainer .scSearchForm{
+		float: none;
+		margin: 10px 0 10px;
+		width: 100%;
+	}
+	.scContainer .scSearchFormInput{
+		width: 100%;
+	}
+	.scContainer .scProductItem{
+		float: none;
+		height: 237px;
+		width: auto;
+	}
+	.scContainer .scProductItemPic{
+		float: left;
+		width: 50%;
+	}
+	.scContainer .scProductItemInfo{
+		float: right;
+		margin: 10px 0;
+		overflow: hidden;
+		text-align: left;
+		width: 50%;
+	}
+	.scContainer .scProductItemName{
+		position: static;
+		margin: 0 10px 10px;
+		width: auto;
+	}
+	.scContainer .scProductItemName a:link, 
+	.scContainer .scProductItemName a:active, 
+	.scContainer .scProductItemName a:visited, 
+	.scContainer .scProductItemName a:hover, 
+	.scContainer .scProductItemName a:focus{
+		padding: 0;
+	}
+	.scContainer .scProductItemPrice{
+		position: static;
+		margin: 0 10px 10px;
+		width: auto;
+	}
+	.scContainer .scProductItemButtons{
+		position: static;
+		margin: 0 10px;
+		width: auto;
+	}
+	.scContainer .scProductSimilarBox{
+		height: auto;
+		overflow: visible;
+	}
+	.scContainer .scProductSimilar{
+		float: none;
+		height: 184px;
+		margin: 0 0 10px;
+		width: auto;
+	}
+	.scContainer .scProductSimilarPic{
+		float: left;
+		width: 50%;
+	}
+	.scContainer .scProductSimilarPic img{
+		max-height: 164px;
+	}
+	.scContainer .scProductSimilarInfo{
+		float: right;
+		text-align: left;
+		width: 50%;
+	}
+	.scContainer .scProductSimilarName{
+		position: static;
+		margin: 40px 10px 0;
+		width: auto;
+	}
+	.scContainer .scProductSimilarPrice{
+		position: static;
+		margin: 15px 10px 0;
+		width: auto;
+	}
+	.scContainer .scProductGallery{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scProductInfo{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scProductInfoInner{
+		margin: 0;
+	}
+	.scContainer .scProductHeadingBox{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scTable1BodyRow{
+		min-height: 120px;
+		height: auto !important;
+		height: 120px;
+	}
+	.scContainer .scTable1ThDel, 
+	.scContainer .scTable1TdDel{
+		width: 9%;
+	}
+	.scContainer .scTable1TdPic{
+		width: 12%;
+	}
+	.scContainer .scTable1TdPic img{
+		max-width: 45px;
+	}
+	.scContainer .scTable1TdName{
+		width: 79%;
+	}
+	.scContainer .scTable1ThName{
+		display: none;
+		width: 0;
+	}
+	.scContainer .scTable1TdPrice{
+		clear: left;
+		width: 29%;
+	}
+	.scContainer .scTable1ThPrice{
+		display: none;
+		width: 0;
+	}
+	.scContainer .scTable1ThNamePrice{
+		display: block;
+		width: 20%;
+	}
+	.scContainer .scTable1ThQty, 
+	.scContainer .scTable1TdQty{
+		width: 42%;
+	}
+	.scContainer .scTable1ThQty{
+		text-align: right;
+	}
+	.scContainer .scProductSpinner{
+		float: right;
+	}
+	.scContainer .scTable1ThTotal, 
+	.scContainer .scTable1TdTotal{
+		width: 29%;
+	}
+	.scContainer .scTable1TdFootLabel{
+		width: 60%;
+	}
+	.scContainer .scTable1TdFootValue{
+		width: 40%;
+	}
+	.scContainer .scPaperSidebar{
+		float: none;
+		width: auto;
+		border-bottom: solid 1px #ece8e8;
+	}
+	.scContainer .scCheckoutTableLabel{
+		width: 30%;
+	}
+	.scContainer .scCheckoutTableValue{
+		width: 70%;
+	}
+	.scContainer .scPaperSheet,
+	.scContainer .scPaperControl{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scPaperSheet .scPaperChain{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scPaperSheet .scText,
+	.scContainer .scPaperSheet .scTextarea{
+		width: 95%;
+	}
+	.scContainer .scPaperSheet .scSelect{
+		width: 98.7%;
+	}
+	.scContainer .scPaperSheet .scTextarea{
+		height: 110px;
+	}
+	.scContainer .scSelectorSend2FriendBox .scText{
+		width: 88%;
+	}
+}
+@media screen and (min-width: 480px) and (max-width: 622px) {
+	.scContainer .scCartMenu{
+		width: 100%;
+	}
+	.scContainer .scCartMenu li{
+		width: 33%;
+	}
+	.scContainer .scAccountMenu{
+		width: 60%;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.scContainer{
+		width: 100%;
+	}
+	.scContainer .scMenuDropdown{
+		display: none;
+	}
+	.scContainer .scProductItem{
+		width: 33%;
+	}
+	.scContainer .scProductSimilar{
+		width: 24%;
+	}
+	.scContainer .scProductGallery{
+		width: 43%;
+	}
+	.scContainer .scProductInfo{
+		width: 57%;
+	}
+	.scContainer .scProductHeadingBox{
+		width: 57%;
+	}
+	.scContainer .scTable1ThDel, 
+	.scContainer .scTable1TdDel{
+		width: 6%;
+	}
+	.scContainer .scTable1TdPic{
+		width: 7%;
+	}
+	.scContainer .scTable1TdName{
+		width: 36%;
+	}
+	.scContainer .scTable1ThName{
+		width: 43%;
+	}
+	.scContainer .scTable1ThPrice, 
+	.scContainer .scTable1TdPrice{
+		width: 13%;
+	}
+	.scContainer .scTable1ThQty, 
+	.scContainer .scTable1TdQty{
+		width: 15%;
+	}
+	.scContainer .scTable1ThTotal, 
+	.scContainer .scTable1TdTotal{
+		width: 23%;
+	}
+	.scContainer .scTable1TdFootLabel{
+		width: 65%;
+	}
+	.scContainer .scTable1TdFootValue{
+		width: 35%;
+	}
+	.scContainer .scPaperSidebar{
+		width: 35%;
+	}
+	.scContainer .scPaperSheet,
+	.scContainer .scPaperControl{
+		width: 65%;
+	}
+	.scContainer .scPaperSheet .scPaperChain{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scPaperSheet .scText,
+	.scContainer .scPaperSheet .scTextarea{
+		width: 95%;
+	}
+	.scContainer .scPaperSheet .scSelect{
+		width: 98.7%;
+	}
+	.scContainer .scPaperSheet .scTextarea{
+		height: 110px;
+	}
+	.scContainer .scSelectorSend2FriendBox .scPaperChain{
+		float: none;
+		width: auto;
+	}
+	.scContainer .scSelectorSend2FriendBox .scText{
+		width: 90%;
+	}
+	.scContainer .scHeaderLimiter2{
+		display: block;
+		clear: right;
+	}
+	.scContainer .scSearchForm{
+		width: 60%;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.scContainer{
+		width: 100%;
+	}
+	.scContainer .scMenuDropdown{
+		display: none;
+	}
+	.scContainer .scProductItem{
+		width: 25%;
+	}
+	.scContainer .scPaperSheet .scText,
+	.scContainer .scPaperSheet .scTextarea{
+		width: 90%;
+	}
+	.scContainer .scPaperSheet .scSelect{
+		width: 93.7%;
+	}
+	.scContainer .scPaperSheet .scTextarea{
+		height: 110px;
+		width: 97%;
+	}
+	.scContainer .scSelectorSend2FriendBox .scText{
+		width: 90%;
+	}
+	.scContainer .scHeaderLimiter2{
+		display: block;
+		clear: right;
+	}
+	.scContainer .scTable1TdFootValue .scSelect{
+		width: 90%;
+	}
+	.scContainer .scTable1TdFootValue .scText{
+		width: 80%;
+	}
+}
